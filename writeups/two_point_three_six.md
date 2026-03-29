@@ -1,0 +1,72 @@
+# CTF Writeup: Two-Point-ThreeSix
+
+**Challenge Name:** Two-Point-ThreeSix  
+**Category:** OSINT  
+**Flag Format:** `MythX{JohnDoe_hhmm_hhmm_ddmmyyyy}`
+
+### Challenge Description
+
+A recording survives. Listen carefully.
+
+**Determine:**
+
+- The name of the female voice (as identified in public records).
+- The real-world start and end time of the recording (IST).
+- The date on which the recording took place.
+
+---
+
+### Solution
+
+#### Step 1: Audio Analysis
+
+We began by analyzing the provided audio clip. The recording contained a tense exchange between a hostage and a terrorist handler during a high-profile attack. Key phrases and the nature of the dialogue allowed us to identify the source as a transcript from the **2008 Mumbai (26/11) terror attacks**.
+
+By searching for specific keywords from the clip, we located the original news footage and public records of the intercepted phone calls.
+
+- **Source:** "26/11: Kasab giggles, terror on tape"
+- **Reference:** [YouTube Link](https://www.youtube.com/watch?v=IIo0c16TPwg)
+
+---
+
+#### Step 2: Identifying the Female Voice
+
+Within the intercepted recordings, the terrorist handler is heard forcing a female hostage to speak. Publicly available transcripts of the 26/11 investigations and the specific YouTube footage identify this hostage as **Norma**, one of the guests at the Taj Mahal Palace Hotel.
+
+---
+
+#### Step 3: Real-World Time Extraction (IST)
+
+In the identified footage (specifically around the 2:20 mark), an on-screen overlay provides the precise timing of the intercepted call as recorded by intelligence agencies:
+
+- **Start Time:** 16:50 IST → **1650**
+- **End Time:** 17:01 IST → **1701**
+
+---
+
+#### Step 4: Date Extraction
+
+The same public records and on-screen overlays verify the date of this specific intercepted conversation:
+
+- **Date:** November 27, 2008
+- **Format (ddmmyyyy):** **27112008**
+
+---
+
+#### Step 5: Flag Construction
+
+Combining the extracted name, time range, and date into the required format:
+
+**Flag:**
+
+```text
+MythX{Norma_1650_1701_27112008}
+```
+
+---
+
+### Tools Used
+
+- **Audio Analysis:** Manual listening and keyword extraction.
+- **Google Search / OSINT:** Locating public records of the 26/11 transcripts.
+- **YouTube:** Visual verification of time/date overlays in news archives.

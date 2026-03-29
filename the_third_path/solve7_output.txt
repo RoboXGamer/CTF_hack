@@ -1,0 +1,93 @@
+Non-zero deviations: 1089
+
+=== Building bytes by ORing consecutive non-zeros ===
+Extracted 389 bytes
+Hex: 08b0044020102001100208102002011881800113881004024212223480402020041040200130100210180404018418400c04200408084003404080010402018820080420040410048020100801402040081003202010083120200140304088805088080860402810102001011020404008102004348040044004081010200a40084042040116fffffcff0c0fffe7f9e73f0fc7ff028008ffffff780ffffbffff0f3cff08200860ffe0cfeb787ffd7b1e6f0f3cff0422ffffe087e9784f38f9787c3f0f3c40ff0481ffffffff2010ffff0240ffffffff7040ffffffff0110ff3ff0ff0111ff3fffff021404ffbff0ffff0104ffff3ff0ffff10404fffffffffff04100fffffffff04040fffffffff7002401ee03801028770803cfc0a804102cf14fb201340fc017c208104ff84e30101fc084810ffff0804fffd48080408800480ffff0221ff06802080102080800408c2802028201080430804040a2804012004020802900240044410408440a4022040204182200210c040010104010210028040021002
+ASCII: b'\x08\xb0\x04@ \x10 \x01\x10\x02\x08\x10 \x02\x01\x18\x81\x80\x01\x13\x88\x10\x04\x02B\x12"4\x80@  \x04\x10@ \x010\x10\x02\x10\x18\x04\x04\x01\x84\x18@\x0c\x04 \x04\x08\x08@\x03@@\x80\x01\x04\x02\x01\x88 \x08\x04 \x04\x04\x10\x04\x80 \x10\x08\x01@ @\x08\x10\x03  \x10\x081  \x01@0@\x88\x80P\x88\x08\x08`@(\x10\x10 \x01\x01\x10 @@\x08\x10 \x044\x80@\x04@\x04\x08\x10\x10 \n@\x08@B\x04\x01\x16\xff\xff\xfc\xff\x0c\x0f\xff\xe7\xf9\xe7?\x0f\xc7\xff\x02\x80\x08\xff\xff\xffx\x0f\xff\xfb\xff\xff\x0f<\xff\x08 \x08`\xff\xe0\xcf\xebx\x7f\xfd{\x1eo\x0f<\xff\x04"\xff\xff\xe0\x87\xe9xO8\xf9x|?\x0f<@\xff\x04\x81\xff\xff\xff\xff \x10\xff\xff\x02@\xff\xff\xff\xffp@\xff\xff\xff\xff\x01\x10\xff?\xf0\xff\x01\x11\xff?\xff\xff\x02\x14\x04\xff\xbf\xf0\xff\xff\x01\x04\xff\xff?\xf0\xff\xff\x10@O\xff\xff\xff\xff\xff\x04\x10\x0f\xff\xff\xff\xff\x04\x04\x0f\xff\xff\xff\xffp\x02@\x1e\xe08\x01\x02\x87p\x80<\xfc\n\x80A\x02\xcf\x14\xfb \x13@\xfc\x01| \x81\x04\xff\x84\xe3\x01\x01\xfc\x08H\x10\xff\xff\x08\x04\xff\xfdH\x08\x04\x08\x80\x04\x80\xff\xff\x02!\xff\x06\x80 \x80\x10 \x80\x80\x04\x08\xc2\x80 ( \x10\x80C\x08\x04\x04\n(\x04\x01 \x04\x02\x08\x02\x90\x02@\x04D\x10@\x84@\xa4\x02 @ A\x82 \x02\x10\xc0@\x01\x01\x04\x01\x02\x10\x02\x80@\x02\x10\x02'
+ASCII strings: [b' @ A']
+
+=== Building bytes by ADDING consecutive non-zeros ===
+Extracted 389 bytes
+Hex: 08b0044020102001100208102002011881800113881004024212223880402020041040200150100210180404018418400c04200408084003404080010402018820080420040410048020100801402040081003202010083120200140304088805088080860402810102001011020404008102004348040044004081010200a4008404204011680c4fcff0c0f1fe739e73f0fc7ea028008bdffc1880f8efb0fff133c3a08200860f0e0d26b788b657b326f0f3c880422c24ee08ae9784f3859787c47123c40920481661d611d20103f6e0240c97020297040737968fa0110bd78f04901117588741e021404caf8f064440104d70378f0243d10404ff0c339a45b04100f00df565804040f20ebbeb97002401ee03801028770803c040a804102d314fb201340fc017c2081040184040101fc08481063050804170d48080408800480df3502210506802080102080800408c2802028201080430804040a2804012004020802900240044410408440a4022040204182200210c040010104010210028040022002
+ASCII: b'\x08\xb0\x04@ \x10 \x01\x10\x02\x08\x10 \x02\x01\x18\x81\x80\x01\x13\x88\x10\x04\x02B\x12"8\x80@  \x04\x10@ \x01P\x10\x02\x10\x18\x04\x04\x01\x84\x18@\x0c\x04 \x04\x08\x08@\x03@@\x80\x01\x04\x02\x01\x88 \x08\x04 \x04\x04\x10\x04\x80 \x10\x08\x01@ @\x08\x10\x03  \x10\x081  \x01@0@\x88\x80P\x88\x08\x08`@(\x10\x10 \x01\x01\x10 @@\x08\x10 \x044\x80@\x04@\x04\x08\x10\x10 \n@\x08@B\x04\x01\x16\x80\xc4\xfc\xff\x0c\x0f\x1f\xe79\xe7?\x0f\xc7\xea\x02\x80\x08\xbd\xff\xc1\x88\x0f\x8e\xfb\x0f\xff\x13<:\x08 \x08`\xf0\xe0\xd2kx\x8be{2o\x0f<\x88\x04"\xc2N\xe0\x8a\xe9xO8Yx|G\x12<@\x92\x04\x81f\x1da\x1d \x10?n\x02@\xc9p )p@syh\xfa\x01\x10\xbdx\xf0I\x01\x11u\x88t\x1e\x02\x14\x04\xca\xf8\xf0dD\x01\x04\xd7\x03x\xf0$=\x10@O\xf0\xc39\xa4[\x04\x10\x0f\x00\xdfVX\x04\x04\x0f \xeb\xbe\xb9p\x02@\x1e\xe08\x01\x02\x87p\x80<\x04\n\x80A\x02\xd3\x14\xfb \x13@\xfc\x01| \x81\x04\x01\x84\x04\x01\x01\xfc\x08H\x10c\x05\x08\x04\x17\rH\x08\x04\x08\x80\x04\x80\xdf5\x02!\x05\x06\x80 \x80\x10 \x80\x80\x04\x08\xc2\x80 ( \x10\x80C\x08\x04\x04\n(\x04\x01 \x04\x02\x08\x02\x90\x02@\x04D\x10@\x84@\xa4\x02 @ A\x82 \x02\x10\xc0@\x01\x01\x04\x01\x02\x10\x02\x80@\x02 \x02'
+ASCII strings: [b'e{2o', b'xO8Yx|G', b'p )p@syh', b' @ A']
+
+=== ORed groups as memory offsets ===
+  OR groups * 4: [b'dZ_dd#&', b'dZ!dddd', b'ZdS\\dd', b'dddddZ', b'ddddZZ']
+  OR groups * 8: [b'ZS#2-L']
+  OR groups * 16: [b'ck,#`k0', b'df2KZ0d!']
+  OR groups * 32: [b'-3733-k3', b'_33332d33', b'w33333', b'd-3333']
+  OR groups * 128: [b'KqqqqyKqqqq', b'dq$1qq', b'dqqw1qq', b'qqqqqd', b'kqqqqddkqqqqy']
+  OR groups * 1024: [b'yJ22?Kc']
+  OR groups * 2048: [b'UUUn1U7UU1', b'UUUUUK', b'1UUUUKK1UUUUd']
+  OR groups * 8192: [b';;(u((', b'(0000C(0000K', b'(^00000']
+  ADD groups * 1: [b'k%}^?^,%9']
+  ADD groups * 4: [b'\\zfUQZ']
+  ADD groups * 16: [b'df2KZ0d!']
+  ADD groups * 64: [b'zOIyEy']
+  ADD groups * 2048: [b'J1F71UW', b')KK1;]']
+  ADD groups * 8192: [b';;(u((']
+
+=== ORed value XOR memory[group_start_position] ===
+Total groups: 389
+First 20 groups (pos, value): [(1, 8), (15, 176), (22, 4), (30, 64), (37, 32), (47, 16), (49, 32), (51, 1), (67, 16), (70, 2), (82, 8), (103, 16), (110, 32), (115, 2), (118, 1), (122, 24), (132, 129), (135, 128), (143, 1), (147, 19)]
+  mem_scale=2: [b'LgXy;9(', b'(b X a']
+  mem_scale=4: [b"gK%'G<"]
+  mem_scale=700: [b'4V7F.b']
+  mem_scale=1024: [b'WzWN~$']
+
+=== ADD groups as direct memory offsets ===
+ADD group values (first 20): [8, 176, 4, 64, 32, 16, 32, 1, 16, 2, 8, 16, 32, 2, 1, 24, 129, 128, 1, 19]
+Min: 1, Max: 7022
+Extracted from ADD offsets: b'\xff\x18\xd7\xad\x03Z\x03yZ\xde\xffZ\x03\xdey\xed\n\xcey?_Z\xd7\xde\xff\x1e\xb6\x19\xce\xad\x03\x03\xd7Z\xad\x03y\xa0Z\xdeZ\xed\xd7\xd7yL\xed\xadk\xd7\x03\xd7\xff\xff\xad-\xad\xad\xcey\xd7\xdey_\x03\xff\xd7\x03\xd7\xd7Z\xd7\xce\x03Z\xffy\xad\x03\xad\xffZ-\x03\x03Z\xff\x87\x03\x03y\xad\xea\xad_\xce\xa0_\xff\xff'
+ASCII: [b'y?_Z', b'^,%9', b'[&yZ', b'yd>_', b'fL4yy']
+  ADD*16: [b'wck,#5k0', b'df2KZ0d!']
+  ADD*32: [b'd-Np7_']
+
+
+=== Decrypt OR-assembled bytes ===
+AES-ECB: [b'F/-ke', b'Zs-Dx$R', b'[*}]', b'pd3G', b'"*$z']
+AES-CBC(IV=0): [b'~]mN', b' -D/T', b'# &HV4']
+AES-CBC(IV=data[:16]): [b'~]mN', b' -D/T', b'# &HV4']
+
+=== Decrypt ADD-assembled bytes ===
+AES-ECB: [b'M6/0', b'F/-ke', b'Zs-Dx$R', b'[*}]', b'&Wj-', b'\\=+rQ', b'"*$z', b"EO\\'="]
+AES-CBC(IV=0): [b'LUL%', b"'.;/", b'@77c', b']aN>', b',dHd', b'# &HV4', b'~1y\\']
+AES-CBC(IV=data[:16]): [b'LUL%', b"'.;/", b'@77c', b']aN>', b',dHd', b'# &HV4', b'~1y\\']
+
+
+=== DETAILED OR-ASSEMBLY ===
+Number of groups: 389
+Group sizes distribution: {1: 257, 2: 60, 3: 16, 4: 9, 5: 1, 6: 8, 7: 3, 9: 2, 10: 6, 11: 6, 12: 2, 13: 1, 15: 1, 16: 1, 17: 6, 18: 3, 20: 2, 21: 2, 27: 1, 29: 1, 47: 1}
+
+First 30 groups (size, ored_value, bits):
+  size=1, value=  8 (0x08, '.'), bits=[8]
+  size=2, value=176 (0xb0, '.'), bits=[48, 128]
+  size=1, value=  4 (0x04, '.'), bits=[4]
+  size=1, value= 64 (0x40, '@'), bits=[64]
+  size=1, value= 32 (0x20, ' '), bits=[32]
+  size=1, value= 16 (0x10, '.'), bits=[16]
+  size=1, value= 32 (0x20, ' '), bits=[32]
+  size=1, value=  1 (0x01, '.'), bits=[1]
+  size=1, value= 16 (0x10, '.'), bits=[16]
+  size=1, value=  2 (0x02, '.'), bits=[2]
+  size=1, value=  8 (0x08, '.'), bits=[8]
+  size=1, value= 16 (0x10, '.'), bits=[16]
+  size=1, value= 32 (0x20, ' '), bits=[32]
+  size=1, value=  2 (0x02, '.'), bits=[2]
+  size=1, value=  1 (0x01, '.'), bits=[1]
+  size=2, value= 24 (0x18, '.'), bits=[8, 16]
+  size=2, value=129 (0x81, '.'), bits=[1, 128]
+  size=1, value=128 (0x80, '.'), bits=[128]
+  size=1, value=  1 (0x01, '.'), bits=[1]
+  size=3, value= 19 (0x13, '.'), bits=[2, 16, 1]
+  size=2, value=136 (0x88, '.'), bits=[128, 8]
+  size=1, value= 16 (0x10, '.'), bits=[16]
+  size=1, value=  4 (0x04, '.'), bits=[4]
+  size=1, value=  2 (0x02, '.'), bits=[2]
+  size=2, value= 66 (0x42, 'B'), bits=[2, 64]
+  size=2, value= 18 (0x12, '.'), bits=[2, 16]
+  size=2, value= 34 (0x22, '"'), bits=[32, 2]
+  size=3, value= 52 (0x34, '4'), bits=[4, 48, 4]
+  size=1, value=128 (0x80, '.'), bits=[128]
+  size=1, value= 64 (0x40, '@'), bits=[64]

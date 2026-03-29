@@ -1,0 +1,398 @@
+[*] Connecting to 212.2.250.33:31185
+[*] Logging to recon_logs\safe_verify_1774776763.log
+
+--- startup ---
+=== Note Manager ===
+[*] heap @ 0x319692a0
+[*] win()  @ 0x401296
+[*] hook   @ 0x404260
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+=== append vs replace ===
+
+>>> menu create: b'1'
+
+--- response ---
+Size (0x10–0x400): 
+
+>>> create content fallback: b'A'
+
+--- response ---
+Invalid size.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu edit: b'2'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> edit content fallback: b'B'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu edit: b'2'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> edit content fallback: b'C'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+=== safe index tests ===
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+>>> menu print: b'4'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu delete: b'3'
+
+--- response ---
+Index: 
+
+=== safe length tests ===
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b''
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'A'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAAAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAAAAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> create content fallback: b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+
+--- response ---
+Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> Unknown option.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 
+
+>>> menu print: b'4'
+
+--- response ---
+Index: 
+
+>>> menu create: b'1'
+
+--- response ---
+Invalid index.
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 

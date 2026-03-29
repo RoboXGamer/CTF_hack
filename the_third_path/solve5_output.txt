@@ -1,0 +1,143 @@
+Non-zero deviations count: 1089
+Min: -16, Max: 255
+Valid byte-range deviations: 1088
+First 50: [8, 48, 128, 4, 64, 32, 16, 32, 1, 16, 2, 8, 16, 32, 2, 1, 8, 16, 1, 128, 128, 1, 2, 16, 1, 128, 8, 16, 4, 2, 2, 64, 2, 16, 32, 2, 4, 48, 4, 128, 64, 32, 32, 4, 16, 64, 32, 1, 32, 48]
+
+As hex: 08308004402010200110020810200201081001808001021001800810040202400210200204300480402020041040200120301002101804040104801008400804042004080840010240408001040201088020080420040410048020100801402040081001
+As ASCII: b'\x080\x80\x04@ \x10 \x01\x10\x02\x08\x10 \x02\x01\x08\x10\x01\x80\x80\x01\x02\x10\x01\x80\x08\x10\x04\x02\x02@\x02\x10 \x02\x040\x04\x80@  \x04\x10@ \x01 0\x10\x02\x10\x18\x04\x04\x01\x04\x80\x10\x08@\x08\x04\x04 \x04\x08\x08@\x01\x02@@\x80\x01\x04\x02\x01\x08\x80 \x08\x04 \x04\x04\x10\x04\x80 \x10\x08\x01@ @\x08\x10\x01'
+ASCII strings: [b'xO8x', b'px@y', b'<xxx', b'<xxx', b'<8xx']
+
+XOR with payload key:
+As hex: f9b4b76f697fe92973274acf967e7c6333b4ba8b3de03d2c129fa2edabf1acb66701b7de72e114863de3f026b94ad7dad35e098753a7e3c874cd4e229876d5bef5a43363211ff80b3277c8c6825c7f6abb84b30f9de53b2c179f8aeda7f2eed6251987dd
+ASCII strings: [b")s'J", b'~|c3', b'B#G,', b'1q^:', b'.!L+', b'$Epx', b'G][s', b'<!hY', b'~jD^R', b'N8V{E', b'"/^Z', b'@^DD', b'_vf?']
+
+
+=== INDEX-BASED MEMORY EXTRACTION ===
+First 20 (position, deviation): [(0, -16), (1, 8), (15, 48), (16, 128), (22, 4), (30, 64), (37, 32), (47, 16), (49, 32), (51, 1), (67, 16), (70, 2), (82, 8), (103, 16), (110, 32), (115, 2), (118, 1), (122, 8), (123, 16), (132, 1)]
+  scale=1: [b'=*(4l&', b'C#]Za,', b'C6i"YA']
+  scale=1 XOR dev: [b'zE+,tc>]']
+  scale=2: [b'lcPq{:', b'L"Dw#q,N']
+  scale=2 XOR dev: [b'LgXy;;', b'^/A^jZ']
+  scale=4: [b'wI-7g>', b'6.jPk$']
+  scale=4 XOR dev: [b"gK%'G<"]
+  scale=8: [b'wSx=6.', b'P2,E0L']
+  scale=8 XOR dev: [b'3e$g[]']
+  scale=16: [b'R@59+~', b'Mx;<2p', b'db?H+[', b'<<5#&cMZ', b'-OAZQ(`']
+  scale=16 XOR dev: [b'V;@y<S', b'=^%QMygX-']
+  scale=32 XOR dev: [b"'A8.2-", b'wC=NXIdC']
+  scale=128: [b'Ma=?V\\', b'mBf$8g']
+  scale=128 XOR dev: [b'Xn>zU70', b'kv6!B_', b'"ifl5X']
+  scale=512: [b"Z!0'rQ"]
+  scale=512 XOR dev: [b'4|F54M']
+  scale=700: [b')!^jAn', b"A'HgZ&", b'>P5y_q']
+  scale=700 XOR dev: [b'FQ19Pi']
+  scale=1024: [b'80:n:*<']
+  scale=1024 XOR dev: [b'"rKEFz']
+
+
+=== CUMULATIVE DEVIATION AS OFFSET ===
+Extracted length: 1087
+First 50 hex: 64ebd110772bcf478ed7bacafb4eb439ab762bc5a9fb7b456d67fd261216731c687dbaafeea27415c1bf30219ab9658173fa
+ASCII: [b'{Emg', b'#~Re', b'X3A\\', b'C!ic', b'sz!%', b'K"CbU>79', b'k^1w', b'"Oj9', b'jhN[', b'0_wy']
+
+
+=== EXPECTED vs ACTUAL TIMESTAMP ===
+Timestamp diffs from expected (first 30): [0.0, 0.50625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, 0.25625, -1.24375, -5.24375, -5.24375, -5.24375, -5.24375, -5.24375, -5.24375, -5.36875, -5.36875, -5.36875, -5.36875, -5.36875, -5.36875, -5.36875]
+
+Cumulative drift (round to 1/32):
+First 50 drift units: [0, 16, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, -40, -168, -168, -168, -168, -168, -168, -172, -172, -172, -172, -172, -172, -172, -172, -236, -236, -236, -236, -236, -236, -236, -268, -268, -268, -268, -268, -268, -268, -268, -268, -268, -284, -284]
+
+Drift changes (first 50): [16, -8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -48, -128, 0, 0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, -64, 0, 0, 0, 0, 0, 0, -32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -16, 0, -32]
+
+
+=== XOR(deviation, memory[index]) for each non-std packet ===
+  mem_scale=1: [b'zE+,tc>]']
+  mem_scale=2: [b'LgXy;;', b'^/A^jZ']
+  mem_scale=4: [b"gK%'G<"]
+  mem_scale=8: [b'3e$g[]']
+  mem_scale=16: [b'V;@y<S', b'=^%QMygX-']
+  mem_scale=32: [b"'A8.2-", b'wC=NXIdC']
+  mem_scale=128: [b'Xn>zU70', b'kv6!B_', b'"ifl5X']
+  mem_scale=512: [b'4|F54M']
+  mem_scale=694: [b':QUx|f"']
+  mem_scale=698: [b'zj:q~Wc', b'iN\\J^:', b'q"}ug\'']
+  mem_scale=700: [b'FQ19Pi']
+
+
+=== DEVIATION VALUE AS MEMORY OFFSET ===
+  dev*1: [b't}b<-y', b't^&o}0o']
+  dev*2: [b'LodZw-']
+  dev*4: [b'tkXdd!', b'L#-!#-Y#-', b'\\>&!Cl', b'-J#-Y#-']
+  dev*16: [b'ZdddZ2', b'Z,k,#kZ', b'k-\\08#', b'k-MkkZk', b'k-\\kkk']
+  dev*32: [b'"33_t3', b'\\k-\\k3', b'\\kt0"3']
+  dev*64: [b'.yN^k0']
+  dev*128: [b'681qdk', b'wyKkq1', b'quyddk1']
+  dev*512: [b'Kd;;d2Kd;']
+  dev*2048: [b'nnn(1y', b'nnn(1y', b'U?dKK1(']
+  dev*4096: [b'T9n?C(', b'~^V9MC(']
+  dev*8192: [b'{nV{{K{', b'{n({{{', b'{n({{{', b'{,#0n(Q']
+
+
+=== ALL DELTA UNITS AS SEQUENTIAL BYTES (raw) ===
+First 100: 13fb03030303030303030303030303d3830303030303ff03030303030303c3030303030303e3030303030303030303f303e30302030303030303030303030303030303f30303010303030303030303030303fb0303030303030303030303030303030303
+ASCII: []
+
+=== XOR(delta_units, memory) ===
+  mem offset 0: [b"/D'-(>}X"]
+  mem offset 1536: [b'3 ,rl/}MZ']
+  mem offset 2560: [b'#z)PI2"O1<E']
+  mem offset 6144: [b"g nf^;'W"]
+  mem offset 8192: [b'hjP(mZq?']
+  mem offset 9216: [b'3+O*>ogs']
+
+
+=== MEMORY DUMP STRUCTURE SCAN ===
+  ZIP: [48262, 61148, 72467, 171840, 272784, 286471, 381456, 491245, 514882, 532995]
+  PNG: [925702]
+  PE/EXE: [61138, 61182, 128803, 129806, 383196, 409377, 465758, 494687, 495445, 543359]
+  BMP: [12978, 106685, 306477, 307197, 379821, 395761, 437006, 637564, 682246, 740225]
+
+Long strings (len>=10): 76
+  b'D`SKr{LoVp'
+  b'`BN~lOx`WW'
+  b'C"jti=*Lxe'
+  b'aV<N~1`nHJ@'
+  b'-qRoZBo~x_'
+  b'3n6wBx_6sy'
+  b'cRC:\\Users\\admin\\Downloads\\payload.bin. Password is Rabb1tH0le123!'
+  b'M` T[mlwSu'
+  b'EG_@$0UsF]s6'
+  b'-1qMw)c[eWe9'
+  b"Oe?'1~V/v4-"
+  b'U#Lx6s^y8G'
+  b'nx~0i<94pk'
+  b"f*:euI~<'t"
+  b'7nu~HufTsL'
+  b'iQ,zyY2=>7'
+  b'H4DBV4jS)A'
+  b'@aIU1(xh @9n'
+  b't]nB`x;4:c'
+  b'^Y;w}W{k3Eq'
+
+
+Memory around decoy flag (offset 1688900):
+  0x0019c350: ...W..4...A.......YkH...Z.c.......0.. ...aTc*.;..0
+  0x0019c382: ......Er.J.:....h.b..W...8-X..#....y.....Cd.f.Q...
+  0x0019c3b4: .8..muBU...;...$F..fkl$Df3....5..[6#.V.g...u..Y..@
+  0x0019c3e6: .M.|].F?aN..B%...&....o_.._p.....'L..q..........p.
+  0x0019c418: ^.NWc.X....,.ca.:....j...F..5m...........Q.<.c...O
+  0x0019c44a: ..7.m....C...]..z....%.%..:..3.<....~...\...m...%.
+  0x0019c47c: LZ.7r..$?".......q.;.<..W..c..N..d..N.S....c....T"
+  0x0019c4ae: L.....m..+:Xcx....j...p.>.<.%.....F......`.YZ;....
+  0x0019c4e0: ...b.si....f......MBu.-.n3.........svchost.exe.Vir
+  0x0019c512: tualAlloc.CryptEncrypt.YOUR FILES ARE ENCRYPTED!!.
+  0x0019c544: MythX{m3m0ry_r4ns0mw4r3_d3c0y}.....X......JV.3....
+  0x0019c576: w.....hQ...cA.].F....+..$...7.h.0YL..>5..f..+.j...
+  0x0019c5a8: ....[...%.}...$.M.k.}..U.c...?.8..]$..,F.M.,..Z..G
+  0x0019c5da: ... =..VT.8..k..>.VK...N...ad...x..1}^....,.5+>v..
+  0x0019c60c: [..z<....-3..a..R"U...QQO.N...S.p......5+..5..+x.`
+  0x0019c63e: .......<. .8\Y...!._..=..')....={sM.%.x.9.y...G...
+  0x0019c670: ]]P.4...hg..-.......O....+4f.'...s.gh.Y..-w.d...].
+  0x0019c6a2: ..B..F.<..+).7..b.....L....G.]E..U...B...k.....6jv
+  0x0019c6d4: ..F>MV..X4....Z.Q.]..Z....=V7q..?.S.......$I.F...n
+  0x0019c706: )..GJ.....q.h.VG.{..Pr1D.R....".-a..u.,a.3..^..z..

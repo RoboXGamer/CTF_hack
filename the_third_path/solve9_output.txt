@@ -1,0 +1,40 @@
+389 OR-grouped bytes: 389
+
+=== Decrypt 384-byte timing data ===
+
+Decoy 2: b'MythX{nice_try_but_keep_looking}'
+Decoy 2 hex: 4d797468587b6e6963655f7472795f6275745f6b6565705f6c6f6f6b696e677d
+Decoy2 XOR timing[:32]: b'E\xc9p(xkNhsgWdR{^z\xf4\xf4^x\xedut].}M_\xe9.G]'
+
+
+=== Using decoy text as key ===
+SHA256 of decoy2: 723c0c7dfdbdd6020abda14c815d8c7d0a4442c843c80b2dd71a8aa3ede63f08
+
+
+=== COMPREHENSIVE MYTHX SEARCH ===
+  'MythX{' at 1688900: b'MythX{m3m0ry_r4ns0mw4r3_d3c0y}\x00\x8c\n\x9c\x98X\x85\x15\x00\n\x9d\nJV\xeb3\xdd\x15\xc0\x12w\xed\x1e\x06\xdd\xd3hQ\x98\xd6'
+  'MythX' at 1688900: b'MythX{m3m0ry_r4ns0mw4r3_d3c0y}\x00\x8c\n\x9c\x98X\x85\x15\x00\n\x9d\nJV\xeb3\xdd\x15\xc0\x12w\xed\x1e\x06\xdd\xd3hQ\x98\xd6'
+Base64 of MythX: b'TXl0aFh7'
+
+
+=== DELTA AS ASCII (various transforms) ===
+256-dev: b'\xf0\xf8\xd0\x80\xfc\xc0\xe0\xf0\xe0\xff\xf0\xfe\xf8\xf0\xe0\xfe\xff\xf8\xf0\xff\x80\x80\xff\xfe\xf0\xff\x80\xf8\xf0\xfc\xfe\xfe\xc0\xfe\xf0\xe0\xfe\xfc\xd0\xfc\x80\xc0\xe0\xe0\xfc\xf0\xc0\xe0\xff\xe0'
+ASCII: [b'D==@']
+
+
+=== CUMULATIVE DRIFT POINTER ===
+Final drift: -105449
+Final drift mod memsize: 1991703
+Unique drift values: 1090
+Non-negative drift values: [0, 8, 16]
+Memory from drift pointers: [b';;;;;;;;<<<<<<<', b'*********************+++++++', b'BBBBBB', b',,,,,,,,,,,,,,,,,,,,,,,,,,', b'.!!!!!!!!!!', b')))))))))))', b':::xxxxxxxxxxx7', b'>>>&&&&&&yy', b'~~~~~~~~~~~~~', b'LLLLLLLLLLLLLL']
+Memory from abs_drift pointers: [b'wwwwwwwwww++', b'GGGGGGGGGGGGGGGG', b'{EEEEEEmggg', b'&&&&&&&&&&&&&&&&&&&&&&&&&&', b'hhhhhhhhhhhhhhhhh}', b'tttttt', b'000000!!', b'eeeeeeeeeeee', b'|||||||||||||||||||', b'wwwwwwwwwww']
+
+
+=== ALL DELTA UNITS MOD 256 ===
+First 50: 13fb03030303030303030303030303d3830303030303ff03030303030303c3030303030303e3030303030303030303f303e3
+Non-3 values: 1089
+First 30: [(0, 19), (1, 251), (15, 211), (16, 131), (22, 255), (30, 195), (37, 227), (47, 243), (49, 227), (51, 2), (67, 243), (70, 1), (82, 251), (103, 243), (110, 227), (115, 1), (118, 2), (122, 251), (123, 243), (132, 2), (133, 131), (135, 131), (143, 2), (147, 1), (148, 243), (149, 2), (155, 131), (156, 251), (159, 243), (169, 255)]
+Non-3 byte values: 13fbd383ffc3e3f3e302f301fbf3e30102fbf30283830201f30283fbf3ff0101c301f3e301ffd3ff83c3e3e3fff3c3e302e3
+ASCII: b'\x13\xfb\xd3\x83\xff\xc3\xe3\xf3\xe3\x02\xf3\x01\xfb\xf3\xe3\x01\x02\xfb\xf3\x02\x83\x83\x02\x01\xf3\x02\x83\xfb\xf3\xff\x01\x01\xc3\x01\xf3\xe3\x01\xff\xd3\xff\x83\xc3\xe3\xe3\xff\xf3\xc3\xe3\x02\xe3'
+ASCII strings: [b'G@@C', b'|b 8%', b'R <$#', b' <t!', b'#p"#']

@@ -1,0 +1,244 @@
+=== Deltas in 1/32 second units ===
+Distribution of delta units (delta * 32):
+  4 (0.12500s): 24 times
+  5 (0.15625s): 9 times
+  6 (0.18750s): 1 times
+  7 (0.21875s): 13 times
+  10 (0.31250s): 5 times
+  11 (0.34375s): 9 times
+  15 (0.46875s): 1 times
+  16 (0.50000s): 4 times
+  18 (0.56250s): 10 times
+  19 (0.59375s): 37 times
+  20 (0.62500s): 2 times
+  27 (0.84375s): 2 times
+  28 (0.87500s): 5 times
+  31 (0.96875s): 1 times
+  32 (1.00000s): 12 times
+  33 (1.03125s): 1 times
+  34 (1.06250s): 10 times
+  35 (1.09375s): 56 times
+  36 (1.12500s): 3 times
+  37 (1.15625s): 2 times
+  39 (1.21875s): 1 times
+  48 (1.50000s): 1 times
+  52 (1.62500s): 10 times
+  56 (1.75000s): 1 times
+  60 (1.87500s): 6 times
+  62 (1.93750s): 1 times
+  63 (1.96875s): 1 times
+  64 (2.00000s): 12 times
+  65 (2.03125s): 1 times
+  66 (2.06250s): 7 times
+  67 (2.09375s): 31 times
+  69 (2.15625s): 2 times
+  71 (2.21875s): 3 times
+  82 (2.56250s): 1 times
+  98 (3.06250s): 1 times
+  99 (3.09375s): 1 times
+  100 (3.12500s): 3 times
+  101 (3.15625s): 3 times
+  103 (3.21875s): 1 times
+  112 (3.50000s): 1 times
+  115 (3.59375s): 1 times
+  116 (3.62500s): 16 times
+  117 (3.65625s): 2 times
+  122 (3.81250s): 1 times
+  124 (3.87500s): 17 times
+  127 (3.96875s): 2 times
+  128 (4.00000s): 2 times
+  130 (4.06250s): 19 times
+  131 (4.09375s): 41 times
+  132 (4.12500s): 12 times
+  133 (4.15625s): 1 times
+  135 (4.21875s): 6 times
+  136 (4.25000s): 2 times
+  137 (4.28125s): 4 times
+  138 (4.31250s): 1 times
+  139 (4.34375s): 60 times
+  140 (4.37500s): 2 times
+  143 (4.46875s): 1 times
+  144 (4.50000s): 1 times
+  145 (4.53125s): 1 times
+  147 (4.59375s): 10 times
+  148 (4.62500s): 1 times
+  157 (4.90625s): 2 times
+  160 (5.00000s): 1 times
+  163 (5.09375s): 1 times
+  179 (5.59375s): 1 times
+  180 (5.62500s): 3 times
+  187 (5.84375s): 1 times
+  191 (5.96875s): 1 times
+  193 (6.03125s): 3 times
+  194 (6.06250s): 3 times
+  195 (6.09375s): 40 times
+  196 (6.12500s): 13 times
+  197 (6.15625s): 3 times
+  198 (6.18750s): 1 times
+  199 (6.21875s): 40 times
+  200 (6.25000s): 2 times
+  203 (6.34375s): 6 times
+  211 (6.59375s): 4 times
+  212 (6.62500s): 1 times
+  219 (6.84375s): 1 times
+  220 (6.87500s): 2 times
+  224 (7.00000s): 1 times
+  226 (7.06250s): 1 times
+  227 (7.09375s): 45 times
+  228 (7.12500s): 17 times
+  229 (7.15625s): 35 times
+  232 (7.25000s): 1 times
+  235 (7.34375s): 2 times
+  236 (7.37500s): 1 times
+  239 (7.46875s): 2 times
+  241 (7.53125s): 1 times
+  242 (7.56250s): 3 times
+  243 (7.59375s): 42 times
+  244 (7.62500s): 54 times
+  246 (7.68750s): 1 times
+  249 (7.78125s): 1 times
+  251 (7.84375s): 42 times
+  252 (7.87500s): 39 times
+  255 (7.96875s): 48 times
+  256 (8.00000s): 28 times
+  257 (8.03125s): 40 times
+  258 (8.06250s): 57 times
+  259 (8.09375s): 1912 times
+  275 (8.59375s): 1 times
+
+Base unit: 259 (8.09375s)
+Deviations from 259 (first 50): [-16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 128, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 32]
+
+Non-zero deviations: 1089
+First 30: [(0, -16), (1, 8), (15, 48), (16, 128), (22, 4), (30, 64), (37, 32), (47, 16), (49, 32), (51, 1), (67, 16), (70, 2), (82, 8), (103, 16), (110, 32), (115, 2), (118, 1), (122, 8), (123, 16), (132, 1), (133, 128), (135, 128), (143, 1), (147, 2), (148, 16), (149, 1), (155, 128), (156, 8), (159, 16), (169, 4)]
+
+Unique deviation values: [-16, 1, 2, 3, 4, 7, 8, 10, 13, 15, 16, 17, 18, 20, 23, 24, 27, 30, 31, 32, 33, 35, 39, 40, 47, 48, 56, 59, 60, 61, 62, 63, 64, 65, 66, 68, 72, 79, 80, 96, 99, 102, 111, 112, 114, 115, 116, 119, 120, 121, 122, 123, 124, 126, 127, 128, 129, 131, 132, 135, 137, 142, 143, 144, 147, 156, 158, 159, 160, 161, 177, 188, 190, 192, 193, 194, 195, 196, 197, 199, 203, 207, 211, 220, 222, 223, 224, 225, 226, 227, 228, 231, 232, 239, 240, 241, 243, 244, 248, 249, 252, 253, 254, 255]
+Number of unique values: 104
+
+Are deviations powers of 2?
+  1 = 2^0
+  2 = 2^1
+  3 is NOT a power of 2
+  4 = 2^2
+  7 is NOT a power of 2
+  8 = 2^3
+  10 is NOT a power of 2
+  13 is NOT a power of 2
+  15 is NOT a power of 2
+  16 = 2^4
+  17 is NOT a power of 2
+  18 is NOT a power of 2
+  20 is NOT a power of 2
+  23 is NOT a power of 2
+  24 is NOT a power of 2
+  27 is NOT a power of 2
+  30 is NOT a power of 2
+  31 is NOT a power of 2
+  32 = 2^5
+  33 is NOT a power of 2
+  35 is NOT a power of 2
+  39 is NOT a power of 2
+  40 is NOT a power of 2
+  47 is NOT a power of 2
+  48 is NOT a power of 2
+  56 is NOT a power of 2
+  59 is NOT a power of 2
+  60 is NOT a power of 2
+  61 is NOT a power of 2
+  62 is NOT a power of 2
+  63 is NOT a power of 2
+  64 = 2^6
+  65 is NOT a power of 2
+  66 is NOT a power of 2
+  68 is NOT a power of 2
+  72 is NOT a power of 2
+  79 is NOT a power of 2
+  80 is NOT a power of 2
+  96 is NOT a power of 2
+  99 is NOT a power of 2
+  102 is NOT a power of 2
+  111 is NOT a power of 2
+  112 is NOT a power of 2
+  114 is NOT a power of 2
+  115 is NOT a power of 2
+  116 is NOT a power of 2
+  119 is NOT a power of 2
+  120 is NOT a power of 2
+  121 is NOT a power of 2
+  122 is NOT a power of 2
+  123 is NOT a power of 2
+  124 is NOT a power of 2
+  126 is NOT a power of 2
+  127 is NOT a power of 2
+  128 = 2^7
+  129 is NOT a power of 2
+  131 is NOT a power of 2
+  132 is NOT a power of 2
+  135 is NOT a power of 2
+  137 is NOT a power of 2
+  142 is NOT a power of 2
+  143 is NOT a power of 2
+  144 is NOT a power of 2
+  147 is NOT a power of 2
+  156 is NOT a power of 2
+  158 is NOT a power of 2
+  159 is NOT a power of 2
+  160 is NOT a power of 2
+  161 is NOT a power of 2
+  177 is NOT a power of 2
+  188 is NOT a power of 2
+  190 is NOT a power of 2
+  192 is NOT a power of 2
+  193 is NOT a power of 2
+  194 is NOT a power of 2
+  195 is NOT a power of 2
+  196 is NOT a power of 2
+  197 is NOT a power of 2
+  199 is NOT a power of 2
+  203 is NOT a power of 2
+  207 is NOT a power of 2
+  211 is NOT a power of 2
+  220 is NOT a power of 2
+  222 is NOT a power of 2
+  223 is NOT a power of 2
+  224 is NOT a power of 2
+  225 is NOT a power of 2
+  226 is NOT a power of 2
+  227 is NOT a power of 2
+  228 is NOT a power of 2
+  231 is NOT a power of 2
+  232 is NOT a power of 2
+  239 is NOT a power of 2
+  240 is NOT a power of 2
+  241 is NOT a power of 2
+  243 is NOT a power of 2
+  244 is NOT a power of 2
+  248 is NOT a power of 2
+  249 is NOT a power of 2
+  252 is NOT a power of 2
+  253 is NOT a power of 2
+  254 is NOT a power of 2
+  255 is NOT a power of 2
+
+
+=== BINARY ENCODING IN DEVIATIONS ===
+Treating (259 - delta_unit) as raw byte:
+First 100 bytes: 00080000000000000000000000000030800000000000040000000000000040000000000000200000000000000000001000200001000000000000000000000000000000100000020000000000000000000000080000000000000000000000000000000000
+ASCII strings: []
+
+Treating delta_unit as raw byte (mod 256):
+First 100 bytes: 13fb03030303030303030303030303d3830303030303ff03030303030303c3030303030303e3030303030303030303f303e30302030303030303030303030303030303f30303010303030303030303030303fb0303030303030303030303030303030303
+ASCII strings: [b'G@@C', b'|b 8%', b'R <$', b'#p"#']
+
+
+=== BIT ACCUMULATION THEORY ===
+First 30 non-zero deviations: [-16, 8, 48, 128, 4, 64, 32, 16, 32, 1, 16, 2, 8, 16, 32, 2, 1, 8, 16, 1, 128, 128, 1, 2, 16, 1, 128, 8, 16, 4]
+
+Gaps between non-standard packets (first 30): [1, 14, 1, 6, 8, 7, 10, 2, 2, 16, 3, 12, 21, 7, 5, 3, 4, 1, 9, 1, 2, 8, 4, 1, 1, 6, 1, 3, 10, 26]
+
+Grouping every 8 non-zero deviations into one byte:
+Traceback (most recent call last):
+  File "C:\Users\A5IN\Coding\CTF_hack\the_third_path\solve4.py", line 148, in <module>
+    result.append(byte_val)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+ValueError: byte must be in range(0, 256)

@@ -1,0 +1,59 @@
+CTF Writeup: Dynasty
+
+Challenge Name: Dynasty
+Category: OSINT / Artifact Research
+Flag Format: MythX{...}
+
+Challenge Description
+
+The challenge provides a blurred image and description of an early civilization artifact with narrative scenes. The goal is to identify the artifact, its museum location, and its inventory number to construct the flag.
+
+
+
+Solution
+
+Step 1: Determine Artifact
+
+- Reverse image search and keyword queries for “early civilization artifact with narrative scenes knife”.
+- Identified as the Gebel el-Arak Knife (ivory + flint, ~3300 BCE).
+
+Artifact components:
+- gebel
+- el
+- arak
+- knife
+
+Step 2: Identify Museum
+
+- OSINT research indicates the knife currently resides in the Musée du Louvre, Paris.
+
+Museum components:
+- musee
+- du
+- louvre
+
+Step 3: Find Inventory Number
+
+- Louvre collection entry for Gebel el-Arak Knife shows inventory number E 11517.
+- Normalize for flag: e11517.
+
+Step 4: Construct Flag
+
+- Format: MythX{artifactpart1_artifactpart2_artifactpart3_artifactpart4_museumpart1_museumpart2_museumpart3_inventoryno}
+- Final:
+
+MythX{gebel_el_arak_knife_musee_du_louvre_e11517}
+
+
+
+Result
+
+- Flag derived: MythX{gebel_el_arak_knife_musee_du_louvre_e11517}.
+
+
+
+Tools Used
+
+- Reverse image search
+- Web search (OSINT)
+- Louvre collection database

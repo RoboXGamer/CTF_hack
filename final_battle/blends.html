@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3-Image Blend Viewer</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #eee; font-family: 'Segoe UI', monospace; padding: 10px; }
+h1 { text-align: center; color: #f0c; margin: 10px 0; font-size: 20px; }
+h2 { color: #0ff; margin: 15px 0 5px; border-bottom: 1px solid #333; padding-bottom: 4px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 20px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 20px; }
+.card { background: #1a1a1a; border: 1px solid #333; border-radius: 4px; overflow: hidden; }
+.card h3 { padding: 4px 8px; background: #222; color: #0f0; font-size: 11px; }
+.card img { width: 100%; display: block; }
+</style>
+</head>
+<body>
+<h1>🔥 THE FINAL BATTLE — All 3 Images Blended 🔥</h1>
+
+<h2>📸 The 3 Source Images (Grayscale Normalized)</h2>
+<div class="grid">
+<div class="card"><h3>1. Iron Man</h3><img src="g_ironman.png"></div>
+<div class="card"><h3>2. Hidden Image</h3><img src="g_hidden.png"></div>
+<div class="card"><h3>3. Thanos (from iCCP)</h3><img src="g_thanos.png"></div>
+</div>
+
+<h2>⚖️ Equal Blend (33% each)</h2>
+<div class="grid2">
+<div class="card"><h3>Equal Blend</h3><img src="all3_equal.png"></div>
+<div class="card"><h3>Equal Blend INVERTED</h3><img src="all3_equal_inv.png"></div>
+</div>
+
+<h2>⚡ XOR All 3</h2>
+<div class="grid2">
+<div class="card"><h3>XOR</h3><img src="all3_xor.png"></div>
+<div class="card"><h3>XOR Inverted</h3><img src="all3_xor_inv.png"></div>
+</div>
+
+<h2>🎯 Iron Man Heavy</h2>
+<div class="grid">
+<div class="card"><h3>Iron 50%</h3><img src="all3_iron50_hid25_than25.png"></div>
+<div class="card"><h3>Iron 60%</h3><img src="all3_iron60_hid20_than20.png"></div>
+<div class="card"><h3>Iron 70%</h3><img src="all3_iron70.png"></div>
+</div>
+
+<h2>🎯 Hidden Heavy</h2>
+<div class="grid">
+<div class="card"><h3>Hidden 50%</h3><img src="all3_iron25_hid50_than25.png"></div>
+<div class="card"><h3>Hidden 60%</h3><img src="all3_iron20_hid60_than20.png"></div>
+<div class="card"><h3>Hidden 70%</h3><img src="all3_hid70.png"></div>
+</div>
+
+<h2>🟣 Thanos Heavy</h2>
+<div class="grid">
+<div class="card"><h3>Thanos 50%</h3><img src="all3_iron25_hid25_than50.png"></div>
+<div class="card"><h3>Thanos 60%</h3><img src="all3_iron20_hid20_than60.png"></div>
+<div class="card"><h3>Thanos 70%</h3><img src="all3_than70.png"></div>
+</div>
+
+<h2>🔎 Extreme Weight (80%)</h2>
+<div class="grid">
+<div class="card"><h3>Iron 80%</h3><img src="all3_iron80.png"></div>
+<div class="card"><h3>Hidden 80%</h3><img src="all3_hid80.png"></div>
+<div class="card"><h3>Thanos 80%</h3><img src="all3_than80.png"></div>
+</div>
+
+<h2>🔀 XOR Pairwise (RGB)</h2>
+<div class="grid">
+<div class="card"><h3>Iron ^ Hidden</h3><img src="FINAL_xor_iron_hidden.png"></div>
+<div class="card"><h3>Iron ^ Thanos</h3><img src="FINAL_xor_iron_thanos.png"></div>
+<div class="card"><h3>Hidden ^ Thanos</h3><img src="FINAL_xor_hidden_thanos.png"></div>
+</div>
+
+<h2>🌟 XOR ALL THREE (RGB)</h2>
+<div class="grid2">
+<div class="card"><h3>XOR All 3 RGB</h3><img src="FINAL_xor_all3.png"></div>
+</div>
+
+</body>
+</html>

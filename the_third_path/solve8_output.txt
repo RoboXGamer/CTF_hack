@@ -1,0 +1,61 @@
+=== BIT EXTRACTION FROM MEMORY ===
+=== CUMULATIVE DRIFT ANALYSIS ===
+Drift units (first 30): [0, 16, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, -40, -168, -168, -168, -168, -168, -168, -172, -172, -172, -172, -172, -172, -172]
+Drift units range: -105449 to 16
+Drift at end: -105449
+Drift units (last 30): [-105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105413, -105415, -105415, -105415, -105431, -105447, -105447, -105449, -105449, -105449, -105449]
+
+
+=== 389 OR-grouped bytes ===
+Values: [8, 176, 4, 64, 32, 16, 32, 1, 16, 2, 8, 16, 32, 2, 1, 24, 129, 128, 1, 19, 136, 16, 4, 2, 66, 18, 34, 52, 128, 64, 32, 32, 4, 16, 64, 32, 1, 48, 16, 2, 16, 24, 4, 4, 1, 132, 24, 64, 12, 4]
+
+
+=== MODIFY MEMORY WITH TIMING BITS ===
+FOUND MythX at pos 1688900: bytearray(b'MythX{m3m0ry_r4ns0mw4r3_d3c0y}\x00\x8c\n\x9c\x98X\x85\x15\x00\n\x9d\nJV\xeb3\xdd\x15\xc0\x12w\xed\x1e\x06\xdd\xd3hQ\x98\xd6')
+FOUND flag in mem_copy2: [b'MythX{m3m0ry_r4ns0mw4r3_d3c0y}']
+
+
+=== CUMULATIVE SUM OF ALL DELTAS AS MEMORY POINTER ===
+
+
+=== DECRYPT ENTIRE MEMORY DUMP WITH AES ===
+  ECB at offset 309472: [b'Jhf@W>']
+  CBC(iv=00000000) at offset 0: [b'fiSyvO']
+  CBC(iv=00000000) at offset 16: [b'fiSyvO']
+  CBC(iv=00000000) at offset 32: [b'fiSyvO']
+  CBC(iv=00000000) at offset 1688896: [b'PlDdh:']
+  CBC(iv=00000000) at offset 1688912: [b'PlDdh:']
+  CBC(iv=f184376b) at offset 0: [b'fiSyvO']
+  CBC(iv=f184376b) at offset 16: [b'fiSyvO']
+  CBC(iv=f184376b) at offset 32: [b'fiSyvO']
+  CBC(iv=f184376b) at offset 1688896: [b'PlDdh:']
+  CBC(iv=f184376b) at offset 1688912: [b'PlDdh:']
+  CBC(iv=454f0c0c) at offset 0: [b'fiSyvO']
+  CBC(iv=454f0c0c) at offset 16: [b'fiSyvO']
+  CBC(iv=454f0c0c) at offset 32: [b'fiSyvO']
+  CBC(iv=454f0c0c) at offset 1688896: [b'PlDdh:']
+  CBC(iv=454f0c0c) at offset 1688912: [b'PlDdh:']
+
+
+=== EXTRACT SPECIFIC BITS FROM MEMORY ===
+Extracted 355 bits from power-of-2 deviations
+Bytes: bddab6f75a6e1e95d93eb3e256ed9fd071fc35715bb737b16590affc3c374a10c3f63b9fce0b264c2a4d53b3
+ASCII: b'\xbd\xda\xb6\xf7Zn\x1e\x95\xd9>\xb3\xe2V\xed\x9f\xd0q\xfc5q[\xb77\xb1e\x90\xaf\xfc<7J\x10\xc3\xf6;\x9f\xce\x0b&L*MS\xb3'
+ASCII strings: [b'&L*MS']
+
+LSB first: b'\xbd[m\xefZvx\xa9\x9b|\xcdGj\xb7\xf9\x0b\x8e?\xac\x8e\xda\xed\xec\x8d\xa6\t\xf5?<\xecR\x08\xc3o\xdc\xf9s\xd0d2T\xb2\xca\xcd'
+ASCII strings: []
+
+
+=== MASKED BIT EXTRACTION ===
+Extracted 3352 bits
+Bytes: b'\xafv\xad\xbd\xd6\xa6\xe8^\x95\xd9>\xb3\xe2V\xeby\x7fA\xc7\xf0\xd5\xd8\x85\x80\x15#\xd9u\xd25\xfd\x94UB\xb5\xa2>\xba\xdc\x7f;\x84A\xa3\\f\xb9\xc1\x97\xa7$\xab\\U\x8e\x15\x84\xfb\xe0K\xbe\xc7\xe9g~\xe7\x8e^\xc3\xf2\xfc\xf0WB\x97#\xea\t7Y'
+ASCII strings: [b'N)hU', b'"pRO\'']
+
+
+=== BRUTE FORCE XOR KEY SEARCH IN MEMORY ===
+
+
+=== CHECK IF MEMORY IS XOR-ENCRYPTED ===
+XOR 0x93: 00ea4dbe4423e4336c5b400bf8c44cb6c9f78dacdbd6afb17eecb0718b59fcee90b825d825ec8f98f77ca20e2b83a42d7914
+ASCII: ..M.D#.3l[@...L.........~..q.Y....%.%....|..+..-y.

@@ -1,0 +1,44 @@
+=== FULL MEMORY DECRYPTION ===
+Memory size: 2097152
+AES key (SHA256/pw): 454f0c0c454d8f3e7854abe3051f7da2127f9cc6218c0e8708d4b8aad9f5deb5
+CBC IV=0 flags: []
+Long strings: 0
+
+CBC IV=payload flags: []
+Long strings: 0
+
+ECB flags: []
+Long strings: 0
+
+CTR nonce=0 flags: []
+Long strings: 0
+
+MD5 ECB flags: []
+MD5 CBC IV=0 flags: []
+
+=== PBKDF2 KEY DERIVATION ===
+
+=== XOR WITH KEY ===
+XOR SHA256 flags: []
+XOR password flags: []
+XOR MD5 flags: []
+
+=== RC4 ===
+RC4(password) flags: []
+RC4(sha256) flags: []
+
+
+=== EXTRACT PNG ===
+PNG found at offset 925702
+PNG IEND at offset 931272
+PNG size: 5570 bytes
+Saved to extracted.png
+
+
+=== CHECK ZIP FILES ===
+ZIP local file headers found at: []
+
+
+=== SEARCH FOR ADDITIONAL STRINGS ===
+  'MythX' at: [1688900]
+    LES ARE ENCRYPTED!!.MythX{m3m0ry_r4ns0mw4r3_d3c0y}.....X......JV.

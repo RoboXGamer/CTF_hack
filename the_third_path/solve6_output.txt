@@ -1,0 +1,81 @@
+Payload (64 bytes): f184376b295ff909723748c7865e7e623ba4bb0bbde13f3c131faafdaff3aef6651197dc76d110067dc3d022a90af7dbf36e198543bfe7cc75c9ce329036ddba
+Password: Rabb1tH0le123!
+
+=== XOR with password (repeating) ===
+Result: b'\xa3\xe5U\t\x18+\xb19\x1eRy\xf5\xb5\x7f,\x03Y\xc6\x8a\x7f\xf5\xd1SY"-\x99\xdc\xfd\x92\xcc\x94Te\xdf\xec\x1a\xb4!4N\xe2\x82C\xcbh\xc6\xaf\xbb^u\xe0r\x8d\xd4\xed\'\xa8\xacP\xa1B\x95\x8a'
+Hex: a3e55509182bb1391e5279f5b57f2c0359c68a7ff5d15359222d99dcfd92cc945465dfec1ab421344ee28243cb68c6afbb5e75e0728dd4ed27a8ac50a142958a
+
+SHA256 key: 454f0c0c454d8f3e7854abe3051f7da2127f9cc6218c0e8708d4b8aad9f5deb5
+MD5 key: 650e03968b52f6fb881c017d0aacbf0e
+
+=== AES-ECB with SHA256 key ===
+Decrypted: b"\xc9\xf6w\x1a\x9f\xb5\xc0\xed\xbe\xac\xa9|\x13C7\\\xbc\xfdC\x03q$\x97`\x11R\x17\xb3\xf4'!\x00N\xd0\xe4`\xd8\x84Oc\x7fp\xc5\x96\xc6\x9d\xc9\x8bu\x01\x87\xccf\xc1\x00\x16m\xd3\xc02\xb9\x1a\xe7\xcb"
+Hex: c9f6771a9fb5c0edbeaca97c1343375cbcfd430371249760115217b3f42721004ed0e460d8844f637f70c596c69dc98b750187cc66c100166dd3c032b91ae7cb
+
+=== AES-CBC with SHA256 key, IV from payload ===
+Decrypted: b'MythX{nice_try_but_keep_looking}\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'
+
+=== AES-CBC with SHA256 key, IV=0 ===
+Decrypted: b'\xc9\xf6w\x1a\x9f\xb5\xc0\xed\xbe\xac\xa9|\x13C7\\MythX{nice_try_but_keep_looking}\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'
+
+=== AES-128-ECB with MD5 key ===
+Decrypted: b'\xf3J\x9f\xa6<m\x9aA\x9d@\xbb\xf2\x17mT\xfe7{\x0f\xe9\xa6\x88\xa4\x9f8g\xb0W\x80\x97>\xf0\x9e\x94\xbd\xc5 L\x19c\xdb\x7f\x90I|\xce)|:\xe8\xb6\xabK\x11&r+\xdd9\x15\x93iz\xd9'
+
+=== AES-128-CBC with MD5 key, IV from payload ===
+Decrypted: b'\xc6\xff8\x82\x8f\xd7]\x96JP\xf8\x90\x06\xc9@\x92\xa50\x06\xce\x9d\xad&_\xc8`:\xb4\xd3=\x87\x8a_\xf9!w=\xc06tV\x1e\xe97:c\x8d\x02'
+
+=== AES-128-CBC with MD5 key, IV=0 ===
+Decrypted: b'\xf3J\x9f\xa6<m\x9aA\x9d@\xbb\xf2\x17mT\xfe\xc6\xff8\x82\x8f\xd7]\x96JP\xf8\x90\x06\xc9@\x92\xa50\x06\xce\x9d\xad&_\xc8`:\xb4\xd3=\x87\x8a_\xf9!w=\xc06tV\x1e\xe97:c\x8d\x02'
+
+=== AES-128-ECB with password direct (padded) ===
+Decrypted: b'{J\xd4$\x03\xd3~\xfd\x0e+N\xb7\x9eK\x04\xa9-u\xd6\xb5\xe5\xf5lm\xd4\x11\xe4N\x84\x80\x06\x1f\xdb\xd1q\x06\xa8\x07V<\x81\x92*\x04\xba\x81\xf2[\x93OaP\x96/\xf9\xaa4\x1b\x99M\xad\x1cW\xaf'
+
+=== AES-256-ECB with password direct (padded) ===
+Decrypted: b'\x8e\r\x14\x11e\x12\xf76\x05<\xb8\x86\xa5\xbf\xa4K\xf6\xb6HlRS\xaf\xc5u\x11z\n\xc66R\xdc\xca\x99">%0\xf2\x01\xde\x7f\xc7Kr\xdc#}\xc1\xa6\xb9\xa9\xb6\xadf\x16\xf4\x81\x1f\xc1X\x18)\x02'
+
+=== AES-256-CBC with password direct (padded), IV=0 ===
+Decrypted: b'\x8e\r\x14\x11e\x12\xf76\x05<\xb8\x86\xa5\xbf\xa4K\x072\x7f\x07{\x0cV\xcc\x07&2\xcd@h,\xbe\xf1=\x995\x98\xd1\xcd=\xcd`m\xb6\xdd/\x8d\x8b\xa4\xb7.u\xc0|v\x10\x89B\xcf\xe3\xf1\x12\xde\xd9'
+
+=== AES-128-CBC with password direct (padded), IV=0 ===
+Decrypted: b'{J\xd4$\x03\xd3~\xfd\x0e+N\xb7\x9eK\x04\xa9\xdc\xf1\xe1\xde\xcc\xaa\x95d\xa6&\xac\x89\x02\xdex}\xe0u\xca\r\x15\xe6i\x00\x92\x8d\x80\xf9\x15r\\\xad\xf6^\xf6\x8c\xe0\xfe\xe9\xacI\xd8Io\x04\x16\xa0t'
+
+
+=== Context around password in memory ===
+Password found at offset: 309484
+  b'.rkq'
+  b'cRC:\\Users\\admin\\Downloads\\payload.bin. Password is Rabb1tH0le123!'
+  b'$1_o'
+
+Raw bytes around password:
+  0x0004b888: f9b77d39bd356388016e8bd6374bc4543fac9cb6bcaa4965a79d36aa13663e17
+             ..}9.5c..n..7K.T?.....Ie..6..f>.
+  0x0004b8a8: 4f3508fe38d55f8d21d0dbadf410cc9b6352433a5c55736572735c61646d696e
+             O5..8._.!.......cRC:\Users\admin
+  0x0004b8c8: 5c446f776e6c6f6164735c7061796c6f61642e62696e2e2050617373776f7264
+             \Downloads\payload.bin. Password
+  0x0004b8e8: 2069732052616262317448306c6531323321ccd094b7f1ae24315f6fa4b21fb9
+              is Rabb1tH0le123!......$1_o....
+  0x0004b908: 88e54502cf3dd3a045aa9bc4024694c0f86433c11a8d08acc6f6774abecbfb7b
+             ..E..=..E....F...d3.......wJ...{
+  0x0004b928: 4cfd9981a866f7063632c738b2d51c76bc2f4970860ea27d0543e85eb459f602
+             L....f..62.8...v./Ip...}.C.^.Y..
+  0x0004b948: edf6ce05b61ab8e5922e49aa7aeddebb9cdd0f6031f74ca0ec495eadcdb15364
+             ..........I.z......`1.L..I^...Sd
+
+
+=== Crypto-related strings in memory ===
+  'AES' at: [562631]
+    Context: .>W...4...F.+..hm...;.$..N.M..aEs.S:3.vv....-:........A;...D..t
+  'ECB' at: [1164145]
+    Context: )..4V'.H.....y.[._.\..2{......Ecb..._....Kqr$.iKl.#.At...L..N.;
+  'iv=' at: [1827949]
+    Context: ..B6cB$ i.q...;5..f\F7a....{jBIv=.Jc.h^......5..%rd.v....Z.....
+  'IV=' at: [1827949]
+    Context: ..B6cB$ i.q...;5..f\F7a....{jBIv=.Jc.h^......5..%rd.v....Z.....
+  'Crypt' at: [1688860, 1688867, 1688890]
+    Context: .....svchost.exe.VirtualAlloc.CryptEncrypt.YOUR FILES ARE ENCRYPT
+    Context: chost.exe.VirtualAlloc.CryptEncrypt.YOUR FILES ARE ENCRYPTED!!.My
+    Context: CryptEncrypt.YOUR FILES ARE ENCRYPTED!!.MythX{m3m0ry_r4ns0mw4r3_d
+  'encrypt' at: [1688865, 1688888]
+    Context: svchost.exe.VirtualAlloc.CryptEncrypt.YOUR FILES ARE ENCRYPTED!!.My
+    Context: c.CryptEncrypt.YOUR FILES ARE ENCRYPTED!!.MythX{m3m0ry_r4ns0mw4r3_d

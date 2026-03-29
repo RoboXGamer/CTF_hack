@@ -1,0 +1,61 @@
+# CTF Writeup: CookieAuth
+
+**Challenge Name:** CookieAuth
+**Category:** Web / Auth
+**Flag Format:** MythX{...}
+
+### Challenge Description
+
+A web app stores authentication state in a cookie with an HMAC-like signature; source comments leak the server secret.
+
+---
+
+### Solution
+
+#### Step 1: Local Recon
+
+- Open the lab and load the app in a browser.
+- Inspect source HTML (Elements tab): comment reveals `auth_secret=supersecretkey`.
+
+#### Step 2: User Login and Cookie Recognition
+
+- Login as guest:
+  - `username=guest`, `password=guest`
+- In DevTools Application tab, observe cookie `session_token` value; this token encodes user identity and signature.
+
+#### Step 3: Craft Admin Cookie
+
+- Based on source hint, the signing algorithm is MD5.
+- Construct payload fields:
+  - `username=admin`
+  - `role=admin`
+- Compute signature (MD5 of `supersecretkeyadminadmin`): `0d8c2e6689872693269b13a38f9ad12b`.
+
+- Build JSON token:
+
+```json
+{"username": "admin", "role": "admin", "sig": "0d8c2e6689872693269b13a38f9ad12b"}
+```
+
+- Base64-encode this JSON and set it as `session_token` cookie value.
+
+#### Step 4: Access Admin
+
+- Reload the app.
+- Visit `/admin` route (or link) now authorized as admin.
+- Extract flag from admin page.
+
+---
+
+### Flag
+
+- Flag obtained from admin panel after cookie forgery.
+- (Insert actual flag text here once verified.)
+
+---
+
+### Tools Used
+
+- Browser DevTools (Elements + Application)
+- CyberChef / md5 utility
+- Base64 encoder

@@ -1,0 +1,68 @@
+CTF Writeup: SourceDrive
+
+Challenge Name: SourceDrive
+Category: Web / Information Disclosure
+Flag Format: MythX{...}
+
+Challenge Description
+
+A frontend web app with hidden sensitive data in client-side assets. Challenge hints point to inspecting frontend resources instead of interactive exploitation.
+
+
+
+Solution
+
+Step 1: Initial Recon
+
+- Open the web app in browser.
+- Confirmed public UI has no obvious input fields or direct exploit vectors.
+- Hypothesis: secret exposed via frontend source rather than runtime behavior.
+
+Step 2: Page Source Inspection
+
+- Right-click → View Page Source.
+- Search HTML for comments, hidden fields, inline scripts.
+- No flag directly present in first pass.
+
+Step 3: Developer Tools + Sources
+
+- Open DevTools → Sources tab.
+- Identify loaded JS bundles: main.js, app.js, etc.
+- Modern SPA likely hides logic/data in minified code.
+
+Step 4: Analyze JavaScript Bundles
+
+- Pretty-print/minify bundles for readability.
+- Search within scripts for keywords:
+  - flag
+  - secret
+  - token
+  - key
+
+- Found hardcoded string matching expected flag format in one script.
+
+Step 5: Extract and Verify Flag
+
+- Directly extracted hardcoded flag text from JS source.
+- Confirmed this is the challenge flag.
+
+
+
+Key Insight
+
+Frontend assets are fully public. Sensitive data should never be shipped to clients. This challenge demonstrates that secret keys or flags in JS are trivially recoverable by attackers.
+
+
+
+Tools Used
+
+- Browser + DevTools
+- Source view and JS search
+- Code prettifier for minified bundles
+
+
+
+Flag
+
+- Retrieved directly from exposed JavaScript in the bundle.
+- (Insert exact flag value here after verification.)

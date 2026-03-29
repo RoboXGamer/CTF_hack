@@ -1,0 +1,76 @@
+# CTF Writeup: Greeting
+
+**Challenge Name:** Greeting
+**Category:** Exploitation (Pwn)
+**Flag Format:** MythX{...}
+
+### Challenge Description
+
+Remote service accepts input and has both format-string and buffer overflow vector in the same process. Goal is to leak stack canary, compute PIE base, and jump to secret function.
+
+---
+
+### Solution
+
+#### Step 1: Connect to Service
+
+- Open lab and identify host/port.
+- Connect via netcat: `nc -v <host> <port>`.
+
+#### Step 2: Leak Canary + PIE Using Format String
+
+- Use format string payload `%9$p.%11$p` to leak:
+  - Stack canary (first value)
+  - PIE address (second value)
+
+- This gives base address and enables bypassing stack protections.
+
+#### Step 3: Compute Target Addresses
+
+- PIE base calculation: `pie_base = pie_leak - (pie_leak & 0xfff)`.
+- Secret function offset: `SECRET_OFFSET = 0x269`.
+- `secret_func = pie_base + SECRET_OFFSET`.
+- Return-gadget for alignment: `ret_gadget = secret_func - 1`.
+
+#### Step 4: Build Overflow Payload
+
+Use brute force to find correct buffer size (pad) and alignment:
+
+- Start with `pad` in 8..300 step 8.
+- For each pad, try both align=false/true.
+
+Payload structure:
+
+1. `b'A' * pad_size`
+2. `p64(canary)`
+3. `b'\x00' * 8` (saved RBP)
+4. optional `p64(ret_gadget)` if `do_align` true
+5. `p64(secret_func)`
+
+Send this payload and read output for flag.
+
+---
+
+### Automation Script
+
+The full exploit script is below (as provided and used):
+
+```py
+<the full script from the original markdown> 
+```
+
+---
+
+### Result
+
+- Brute force found working `(pad, align)` combination.
+- Exploit triggered `secret_func` and returned flag.
+- Final flag output appeared in remote process response.
+
+---
+
+### Tools Used
+
+- Python + pwntools
+- `nc` for manual testing
+- Host/port from challenge environment

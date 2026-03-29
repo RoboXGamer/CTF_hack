@@ -1,0 +1,13 @@
+Bytes 60-80: bf78da001b40e4bf89504e470d0a1a0a0000000d
+Bytes 68-100: b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x05\x00\x00\x00\x02\xd0\x08\x02\x00\x00\x00@\x1fJ'
+iCCP name: b'ICC Profile'
+Compression byte: 0
+Compressed data starts at: 54
+So PNG at 68 is inside compressed data at relative offset: 14
+Compressed data length: 823877
+Decompressed length: 823616
+First 50 hex: 78da001b40e4bf89504e470d0a1a0a0000000d4948445200000500000002d00802000000401f4a0100000a3a694343507352
+Decompressed data starts with ZLIB header - double compressed!
+Inner decompressed: 823355 bytes
+Inner header: 89504e470d0a1a0a0000000d4948445200000500000002d00802000000401f4a
+SAVED thanos.png!

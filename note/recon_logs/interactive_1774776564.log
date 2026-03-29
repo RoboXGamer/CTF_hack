@@ -1,0 +1,7 @@
+=== Note Manager ===
+[*] heap @ 0x32b692a0
+[*] win()  @ 0x401296
+[*] hook   @ 0x404260
+
+1) Create  2) Edit  3) Delete  4) Print  5) Exit
+> 

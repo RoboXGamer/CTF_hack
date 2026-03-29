@@ -1,0 +1,6 @@
+Iron Man: (1280, 720)
+Hidden: (1280, 720)
+Thanos: (1280, 720)
+Saved FINAL_xor_all3.png
+Saved pairwise XORs
+All final images saved!

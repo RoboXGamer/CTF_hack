@@ -1,0 +1,7 @@
+Saved thanos_from_iccp.png (823609 bytes)
+thanos_from_iccp.png: (1280, 720), mode=RGB
+extracted_png_1.png: (1280, 720), mode=RGB
+
+=== Loading all 3 images ===
+Error with thanos_from_iccp.png: unrecognized data stream contents when reading image file
+Error with extracted_png_1.png: unrecognized data stream contents when reading image file

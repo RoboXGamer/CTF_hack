@@ -1,0 +1,47 @@
+CTF Writeup: Header Hunter
+
+Challenge Name: Header Hunter
+Category: Web / API Discovery
+Flag Format: MythX{...}
+
+Challenge Description
+
+This challenge provides a web app and API docs, where a hidden API endpoint returns an internal token containing the flag.
+
+
+
+Solution
+
+Step 1: Start and Explore
+
+- Start the lab and open the web app.
+- Navigate to the API docs.
+
+Step 2: Extract curl Command
+
+- At the bottom of the home page/API docs, found a curl sample:
+
+
+curl -H "Accept: application/json" http://chall-132f7719.evt-246.glabs.ctf7.com/api/v1/healthcheck
+
+
+- Replace host placeholder with lab domain URL.
+
+Step 3: Retrieve Endpoint Response
+
+- Execute the curl command against the lab host.
+- The API returned JSON with an internal token containing flag data.
+
+
+
+Result
+
+- Flag extracted from JSON response (internal token).
+- (Insert actual flag here after verifying output.)
+
+
+
+Tools Used
+
+- Browser
+- curl

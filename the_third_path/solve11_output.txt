@@ -1,0 +1,37 @@
+=== SPARSE BYTE ARRAY FROM TIMING ===
+Non-zero XOR bytes: 1084
+Message: b'q\x15\xda8/_\xae\xa7$\x849\x9c\x08\x142\x88\xf9JM?L1\x1d\x84\x05Q\xb6\x08\x8a\x16(\x19\xfd\x13\x82\x1a{\xe2\x0b\xd6\x82\xe6\xbd\x1b\xc3\xc2\x95\x06\x8dZu\xfbTN\xec\xb2\xdacu\xb0w\xf1\x9a\xf1\xff\x94^1\xb1\xbe\xe3]\x18n\xa4\xd6\x97\xbe\x9c\x97n\x9b\x16\xaeD\xaf\xf1\r\xc6\x87\x92\x8a\xd7\xf6\xa8\xef\xfbkCA'
+ASCII strings: [b'JM?L1', b'kCAS', b'Ovx4', b'"n;  ', b':k!H', b'>"cc', b'6tv)', b'/?}F"', b'"g[4', b'zE+,tc>]', b'nLLH', b'w2j9', b'lCsc)']
+
+Timing data (389 bytes)
+Timing key: 08b0044020102001100208102002011881800113881004024212223480402020
+
+=== DECRYPT MEMORY WITH TIMING KEY ===
+
+=== DECRYPT TIMING DATA WITH PASSWORD KEY ===
+AES-CBC with payload IV: first 100 bytes: b"\xdcW\xe9J3]\x87\xfbWLv$ 02\xcaf\xbdQ\xd8p\x81\xa0jB\xbbc\xdf\xeb\xb3L\xee\xcb$q\xf5\x8a/>o\xabT\xea\xa2s\xf5\xad=\xf9H\x06w\xeeQ\xfd,\xea\x1b\x93\xfdG\xab5+i\x93\x08\x1b\xfb\xbd\x1apm\x04\xf8%V\xb7'\xa0\xb1e\xce\x1c\x12n\xe5h#\x08\x84\xda3\xea/\xe7\x80`C^"
+ASCII: [b'WLv$ 02', b'~]mN', b' -D/T', b'# &HV4']
+AES(SHA256(decoy1)): [b'nIk.', b':HaW', b'%hq1+', b'^.;^', b'/zOPG']
+
+=== CHECK DIRECT ASCII IN DEVIATIONS ===
+Deviations in ASCII range (32-126): 266
+Message: 0@   @ 0@  @  0@ @@@   @ @     @0@P`@   @@  @@ @@@?A?Ox?x<  @ x@8xxo< xO8xx<@ <@p<p8{xpx@y8zp 8?x{;t
+
+256-deviation in ASCII range: 190
+Message:  @   @  >  @}=q 1} @@= ! y @@=" 9yD1 9@q1=$@ yd? @@ q1=9@ Dybwa   1qba= 9? yb?    yqB=@y;<yr  yq=@@y
+
+
+=== DECRYPT PAYLOAD WITH DIFFERENT KEYS ===
+
+
+=== ANALYZE DECRYPTED PAYLOAD STRUCTURE ===
+Decrypted payload: b'MythX{nice_try_but_keep_looking}\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10\x10'
+Hex: 4d797468587b6e6963655f7472795f6275745f6b6565705f6c6f6f6b696e677d10101010101010101010101010101010
+
+IV (first 16 bytes of payload): f184376b295ff909723748c7865e7e62
+IV as 4 uint32s: (4051973995, 694155529, 1916225735, 2254339682)
+IV as 4 uint32s hex: ['0xf184376b', '0x295ff909', '0x723748c7', '0x865e7e62']
+IV as 8 uint16s: (61828, 14187, 10591, 63753, 29239, 18631, 34398, 32354)
+
+
+=== AES-CTR FULL MEMORY SCAN ===

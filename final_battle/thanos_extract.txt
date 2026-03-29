@@ -1,0 +1,14 @@
+iCCP chunk at 33, size=823890
+  Profile name: 'ICC Profile'
+  Compression method: 0
+  Compressed data size: 823877
+  Decompressed size: 823616
+  Header: 78da001b40e4bf89504e470d0a1a0a0000000d4948445200000500000002d008
+  First 100 bytes: b'x\xda\x00\x1b@\xe4\xbf\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x05\x00\x00\x00\x02\xd0\x08\x02\x00\x00\x00@\x1fJ\x01\x00\x00\n:iCCPsRGB IEC61966-2.1\x00\x00H\x89\x9dSwXSw\x17>\xf7\xde\xec\xc1J\x88\x80\x8c\xb0\x97l\x81\x00"#\xec!S\x96\xa8\xc4$@'
+  Found PNG at offset 7!
+
+All PNG signatures in hidden_image.png: [0, 68]
+
+Extracting PNG at offset 68...
+  Saved as extracted_png_1.png, size=823855
+  Dimensions: 1280x720, bit_depth=8, color_type=2

@@ -1,0 +1,238 @@
+=== CHARACTER AT EACH DRIFT CHANGE POINT ===
+Drift change points: 1090
+First 50 changes:
+  pkt 0: drift=0, offset=0, char='\x93'
+  pkt 1: drift=16, offset=16, char='Z'
+  pkt 2: drift=8, offset=8, char='\xff'
+  pkt 16: drift=-40, offset=40, char='d'
+  pkt 17: drift=-168, offset=168, char='\xeb'
+  pkt 23: drift=-172, offset=172, char='\xd1'
+  pkt 31: drift=-236, offset=236, char='\x10'
+  pkt 38: drift=-268, offset=268, char='w'
+  pkt 48: drift=-284, offset=284, char='+'
+  pkt 50: drift=-316, offset=316, char='\xcf'
+  pkt 52: drift=-317, offset=317, char='G'
+  pkt 68: drift=-333, offset=333, char='\x8e'
+  pkt 71: drift=-335, offset=335, char='\xd7'
+  pkt 83: drift=-343, offset=343, char='\xba'
+  pkt 104: drift=-359, offset=359, char='\xca'
+  pkt 111: drift=-391, offset=391, char='\xfb'
+  pkt 116: drift=-393, offset=393, char='N'
+  pkt 119: drift=-394, offset=394, char='\xb4'
+  pkt 123: drift=-402, offset=402, char='9'
+  pkt 124: drift=-418, offset=418, char='\xab'
+  pkt 133: drift=-419, offset=419, char='v'
+  pkt 134: drift=-547, offset=547, char='+'
+  pkt 136: drift=-675, offset=675, char='\xc5'
+  pkt 144: drift=-676, offset=676, char='\xa9'
+  pkt 148: drift=-678, offset=678, char='\xfb'
+  pkt 149: drift=-694, offset=694, char='{'
+  pkt 150: drift=-695, offset=695, char='E'
+  pkt 156: drift=-823, offset=823, char='m'
+  pkt 157: drift=-831, offset=831, char='g'
+  pkt 160: drift=-847, offset=847, char='\xfd'
+  pkt 170: drift=-851, offset=851, char='&'
+  pkt 196: drift=-853, offset=853, char='\x12'
+  pkt 206: drift=-855, offset=855, char='\x16'
+  pkt 207: drift=-919, offset=919, char='s'
+  pkt 209: drift=-921, offset=921, char='\x1c'
+  pkt 210: drift=-937, offset=937, char='h'
+  pkt 227: drift=-969, offset=969, char='}'
+  pkt 228: drift=-971, offset=971, char='\xba'
+  pkt 238: drift=-975, offset=975, char='\xaf'
+  pkt 239: drift=-1023, offset=1023, char='\xee'
+  pkt 240: drift=-1027, offset=1027, char='\xa2'
+  pkt 243: drift=-1155, offset=1155, char='t'
+  pkt 249: drift=-1219, offset=1219, char='\x15'
+  pkt 253: drift=-1251, offset=1251, char='\xc1'
+  pkt 257: drift=-1283, offset=1283, char='\xbf'
+  pkt 260: drift=-1287, offset=1287, char='0'
+  pkt 266: drift=-1303, offset=1303, char='!'
+  pkt 268: drift=-1367, offset=1367, char='\x9a'
+  pkt 279: drift=-1399, offset=1399, char='\xb9'
+  pkt 287: drift=-1400, offset=1400, char='e'
+
+Assembled string: b'\x93Z\xffd\xeb\xd1\x10w+\xcfG\x8e\xd7\xba\xca\xfbN\xb49\xabv+\xc5\xa9\xfb{Emg\xfd&\x12\x16s\x1ch}\xba\xaf\xee\xa2t\x15\xc1\xbf0!\x9a\xb9e\x81s\xfa\xaa|\x01\xb6w\x91\xb9\xe8\x88\xd7\xe7\xb7\xa0\xbc\xe6\x89\xacC\x1d\xf4\xca>"\x99ZH_\xe8\x95\xe9=\x98\xacZj+\x9d\xd2\x92ar\xfa\x89O\xc1S\x1f\x82[\xf5^\xd0\nJ\x95|\x94\x1f\x10,\xf7>\x1a\xf6\x04\xa8\xd4\xeb|(6\x8f~\xb5\x9c\xbf\xdc&\x92\xb3D\x89\x8b)\xb6\xf0\\\x16Aj6\x7f\xd1f\xc48p\x88\x02\x80\xd4\x19\xb3jK\xcb\x80L\t\x8e\x01\xc8\xf49\x8b\xa8\xaet\xe6\xd4\x8c \xc1\xbeE\xbe\xc0\x08\x9e\x9a\x85#~Re\xc3?E\xf8\x1b\x92\xc7\x94\xb0\xe1\xf7\xc3\xcbW\'\xdep\x9d\x1a\xf4NM\r\xdb\xf8\xb7\x970\x9bF\xc9\xa2\x08t\x81\x8f\xab\x14o\x1e\xaa\x92Q\xd8\x90\xa8\x0eh\x15\x98E\xd0\xf8J\x0fg\x93K\xe9N*a\xfcj\x927e\xf63\x9cX3A\\\x959\xa9\xd6Y#_\xd3E\xb3\x01i\xa0E\x02\xad\xe8\x1a\x9e0\x8a\xf3\xb3\xa1\xf4h\xdd\x16\xcc\xa8t3\xf7\xed\xc1!\xba\xa0\x89og\x08\x96\xca\xba\xcc\xb3\rS\xfa\xcb\x15\x9a[\xef\'\xa50f\xa4V\xa5\xe7\xc7]"\xc8\x8e\xe7\xdax\xa6X\x98\xa7\x0cH\x1fF\xeb\x89w\x82\x83s.\xe5\xda\xbe;\x06q\x10\xc9\x98\xbb\x0b\x85GS\n\\O\xe3_3\xca)\x94\xa3\xb7\r6Y8\xc3\x1a\x9c\x9fy\xbc?\x98yO\x8f\xae\xcf\xd3&\xf5,xE\x8fL\x9e(\xc3\xb1\xbf\x07:\x0b^\x12gN\xbbj7O\x8b\xe3\xcf\x98\xb5\x90\xcdP\x95\x04C!ic\xff\xae1\x83\xc6\xf3\xfd\xa9,G\xf1\xb5\xd1%\xec\x10K\x02\x8ds2\xd1\xcaG\xec\x1d\xba\xb4\xad\x9b\xdf\xbd !\x12\xe7\x14\xbdd\xbf\x83\x996\xc9c\xa9\x9a\x84\x82\xa3\x9e\x9f\r\xa6h\xc2 gH\xd2\x8a\xd4\xd7\xc5\xfeF\x92D\x17h\x01\x9fY\xf52+\xd1\xf6\x8f\x8d\xf3$\x94\x08\xa7y%\xda\x07\xf7\x14\xa9\xf9\xd2Y\x07\x08!\x83-GD\xd5\'\xa6\x98zC\xd2KT\x19\x1d\xcd-\x17j\xf5^1F\xdf\xfbo+\xe5\n\xc6\xfbE\x97\xa0\xfeZ\xdfR\xf7\x19\x9ea7H\x04,\x99$\x83.m\xdc\xd7\x86\x07\xb1\x1c_\xcf_\xbb7\x85\x0f\x85\xbf\xdc\nL\xcd\x84\xfc\x94\xa8a\xe3\xba\xc3K\xe3\xe1>sm\xc72\xfav/(\x1f\xa3A\x82\x88\xa9\xfe\x1e.\x1d!M\xb2\x9dyn\xa4\x87*\xe4\xf2\xd9\x04\xc5h\xbe\xb6\xd7\xa4[\xf1\x00\xd5o\x81b\x85\x97\x92\rW}\xa8M\x08[Eo\x84\x14^\xc8c\xb9_N\xbf\xee\x91q*@\x13\xc8e\xac\xd1\xd4\xd5d?\x8c;PC\x81\x16\xa8]EO\xce\xaf7\x97\x8d\xafk\x04\xf3\x83\xc9\x8e\xbc\x1f\xdc\xdf\xeb\x9c)0\xce\xdb\x9a\xb6sz!%\xa4;\r\xe4\x89\xfc\n\xb7I\xed?\x00\xdc\xdc\xb4\x97:\xf9WAa\x92\xe0\x97\xa0>\x86\\\xce\x04b\xbd{}\xda\xeb.Z\xa0\xb5\xe4\xd4w\xd2\xfaa\xbfzTj\x19&\x16t\x0cK"CbU>79\xf44|\xff:\x18 \xc4\x1c\x0e\x99Y"\x859\x93u\xf6\x18\xcdv$h\xa9g\xb1\xbe\x1f\xf6H\xd1\xb6#\xdd\xf5\xfc\xfb\xd0Y\xfb\xa3\xcf^\n\xec\xf7k^1w\xb6:\xd0\xf13\x8f\xc2\xe9\xd1T\xe4p\xc6uD\x1a\xfc\xbc\xec\x19\xc2"\x83\x84>\x12\xbd\x9e\x0e\x8c\xcaU\xbe\xf2W\xee\x1d\x9a\xab\r\x89\x97\xf4#\x19\xf5Gg\xca\xae\xee\xa2\x00\x9b\x9f1\x15-\xe0&\x14\x01U\xcd+\xd0\xf0\x98\xac\xf3\x1d\x94\x12\xcf"\xe2\xec\xce9|\xbc*\x8b|)\x02n\x9b8\xf5\xb7xU\x9c\xe3P_\xda\xbb\xb8\xae1\xde:\xc0\xd1\x8c\xafk3\n8\xeb)\xfbB\xf9\xc2Ie\xc4\xdf\xf7\xd1\xa5\x87?t\xc2\xf83\xcc\x99\x14\xb3fi\x1e\x07\x83V]\xae\xd7%\xc2z\xcd\x84J\x94\x11\xb2\xff K\\\xceL\xd5\xed\xbdv\x16d\x81J\x1e\x95.b\xc2\x9e/\xb3\x13Eb\xc5cq\x18\x8c"Oj9\xe2!R\xd3\xc0\xadm\x1c\xffT\xcc\x12+Rf\x1e\x1f\xc26\xc8X&\xed\xf9\xcfOzz\xd3\x92.\xdfjhN[\xcax\xb8\x1a\xf4\xe7\x89\xc3n\x9c\x11\x140_wy\x95,\xc0\x87\xfc\xa8x\xea\x0erJ\x94]'
+ASCII: .Z.d...w+.G.....N.9.v+...{Emg.&..s.h}....t...0!..e.s..|..w............C...>".ZH_...=..Zj+...ar..O.S..[.^..J.|...,.>......|(6.~....&..D..)..\.Aj6..f.8p......jK..L.....9...t... ..E......#~Re.?E..........W'.p...NM.....0.F...t....o...Q....h..E..J.g.K.N*a.j.7e.3.X3A\.9..Y#_.E..i.E.....0.....h....t3...!...og.......S....[.'.0f.V...]"....x.X...H.F..w..s....;.q......GS.\O._3.)....6Y8....y.?.yO....&.,xE.L.(....:.^.gN.j7O.......P..C!ic..1.....,G...%..K..s2..G........ !....d...6.c.........h. gH......F.D.h..Y.2+.....$...y%.......Y..!.-GD.'..zC.KT...-.j.^1F..o+....E...Z.R...a7H.,.$..m......_._.7......L.....a...K..>sm.2.v/(..A.......!M..yn..*.....h....[...o.b....W}.M.[Eo..^.c._N...q*@..e....d?.;PC...]EO..7...k...........)0....sz!%.;......I.?.....:.WAa....>.\..b.{}...Z....w..a.zTj.&.t.K"CbU>79.4|.:. ....Y".9.u...v$h.g....H..#.....Y...^...k^1w.:..3....T.p.uD......"..>......U..W........#..Gg.......1.-.&..U.+........."...9|.*.|).n.8..xU..P_....1.:....k3.8.).B..Ie......?t..3....fi...V]..%.z..J.... K\.L...v.d.J...b../..Eb.cq.."Oj9.!R...m..T..+Rf...6.X&...Ozz....jhN[.x......n...0_wy.,....x..rJ.]
+
+
+=== ONE CHAR PER UNIQUE DRIFT ===
+Unique drift values -> chars: 1090
+Message: b'\x93Z\xffd\xeb\xd1\x10w+\xcfG\x8e\xd7\xba\xca\xfbN\xb49\xabv+\xc5\xa9\xfb{Emg\xfd&\x12\x16s\x1ch}\xba\xaf\xee\xa2t\x15\xc1\xbf0!\x9a\xb9e\x81s\xfa\xaa|\x01\xb6w\x91\xb9\xe8\x88\xd7\xe7\xb7\xa0\xbc\xe6\x89\xacC\x1d\xf4\xca>"\x99ZH_\xe8\x95\xe9=\x98\xacZj+\x9d\xd2\x92ar\xfa\x89O\xc1S\x1f\x82[\xf5^\xd0\nJ\x95|\x94\x1f\x10,\xf7>\x1a\xf6\x04\xa8\xd4\xeb|(6\x8f~\xb5\x9c\xbf\xdc&\x92\xb3D\x89\x8b)\xb6\xf0\\\x16Aj6\x7f\xd1f\xc48p\x88\x02\x80\xd4\x19\xb3jK\xcb\x80L\t\x8e\x01\xc8\xf49\x8b\xa8\xaet\xe6\xd4\x8c \xc1\xbeE\xbe\xc0\x08\x9e\x9a\x85#~Re\xc3?E\xf8\x1b\x92\xc7\x94\xb0\xe1\xf7\xc3\xcbW\'\xdep\x9d\x1a\xf4NM\r\xdb\xf8\xb7\x970\x9bF\xc9\xa2\x08t\x81\x8f\xab\x14o\x1e\xaa\x92Q\xd8\x90\xa8\x0eh\x15\x98E\xd0\xf8J\x0fg\x93K\xe9N*a\xfcj\x927e\xf63\x9cX3A\\\x959\xa9\xd6Y#_\xd3E\xb3\x01i\xa0E\x02\xad\xe8\x1a\x9e0\x8a\xf3\xb3\xa1\xf4h\xdd\x16\xcc\xa8t3\xf7\xed\xc1!\xba\xa0\x89og\x08\x96\xca\xba\xcc\xb3\rS\xfa\xcb\x15\x9a[\xef\'\xa50f\xa4V\xa5\xe7\xc7]"\xc8\x8e\xe7\xdax\xa6X\x98\xa7\x0cH\x1fF\xeb\x89w\x82\x83s.\xe5\xda\xbe;\x06q\x10\xc9\x98\xbb\x0b\x85GS\n\\O\xe3_3\xca)\x94\xa3\xb7\r6Y8\xc3\x1a\x9c\x9fy\xbc?\x98yO\x8f\xae\xcf\xd3&\xf5,xE\x8fL\x9e(\xc3\xb1\xbf\x07:\x0b^\x12gN\xbbj7O\x8b\xe3\xcf\x98\xb5\x90\xcdP\x95\x04C!ic\xff\xae1\x83\xc6\xf3\xfd\xa9,G\xf1\xb5\xd1%\xec\x10K\x02\x8ds2\xd1\xcaG\xec\x1d\xba\xb4\xad\x9b\xdf\xbd !\x12\xe7\x14\xbdd\xbf\x83\x996\xc9c\xa9\x9a\x84\x82\xa3\x9e\x9f\r\xa6h\xc2 gH\xd2\x8a\xd4\xd7\xc5\xfeF\x92D\x17h\x01\x9fY\xf52+\xd1\xf6\x8f\x8d\xf3$\x94\x08\xa7y%\xda\x07\xf7\x14\xa9\xf9\xd2Y\x07\x08!\x83-GD\xd5\'\xa6\x98zC\xd2KT\x19\x1d\xcd-\x17j\xf5^1F\xdf\xfbo+\xe5\n\xc6\xfbE\x97\xa0\xfeZ\xdfR\xf7\x19\x9ea7H\x04,\x99$\x83.m\xdc\xd7\x86\x07\xb1\x1c_\xcf_\xbb7\x85\x0f\x85\xbf\xdc\nL\xcd\x84\xfc\x94\xa8a\xe3\xba\xc3K\xe3\xe1>sm\xc72\xfav/(\x1f\xa3A\x82\x88\xa9\xfe\x1e.\x1d!M\xb2\x9dyn\xa4\x87*\xe4\xf2\xd9\x04\xc5h\xbe\xb6\xd7\xa4[\xf1\x00\xd5o\x81b\x85\x97\x92\rW}\xa8M\x08[Eo\x84\x14^\xc8c\xb9_N\xbf\xee\x91q*@\x13\xc8e\xac\xd1\xd4\xd5d?\x8c;PC\x81\x16\xa8]EO\xce\xaf7\x97\x8d\xafk\x04\xf3\x83\xc9\x8e\xbc\x1f\xdc\xdf\xeb\x9c)0\xce\xdb\x9a\xb6sz!%\xa4;\r\xe4\x89\xfc\n\xb7I\xed?\x00\xdc\xdc\xb4\x97:\xf9WAa\x92\xe0\x97\xa0>\x86\\\xce\x04b\xbd{}\xda\xeb.Z\xa0\xb5\xe4\xd4w\xd2\xfaa\xbfzTj\x19&\x16t\x0cK"CbU>79\xf44|\xff:\x18 \xc4\x1c\x0e\x99Y"\x859\x93u\xf6\x18\xcdv$h\xa9g\xb1\xbe\x1f\xf6H\xd1\xb6#\xdd\xf5\xfc\xfb\xd0Y\xfb\xa3\xcf^\n\xec\xf7k^1w\xb6:\xd0\xf13\x8f\xc2\xe9\xd1T\xe4p\xc6uD\x1a\xfc\xbc\xec\x19\xc2"\x83\x84>\x12\xbd\x9e\x0e\x8c\xcaU\xbe\xf2W\xee\x1d\x9a\xab\r\x89\x97\xf4#\x19\xf5Gg\xca\xae\xee\xa2\x00\x9b\x9f1\x15-\xe0&\x14\x01U\xcd+\xd0\xf0\x98\xac\xf3\x1d\x94\x12\xcf"\xe2\xec\xce9|\xbc*\x8b|)\x02n\x9b8\xf5\xb7xU\x9c\xe3P_\xda\xbb\xb8\xae1\xde:\xc0\xd1\x8c\xafk3\n8\xeb)\xfbB\xf9\xc2Ie\xc4\xdf\xf7\xd1\xa5\x87?t\xc2\xf83\xcc\x99\x14\xb3fi\x1e\x07\x83V]\xae\xd7%\xc2z\xcd\x84J\x94\x11\xb2\xff K\\\xceL\xd5\xed\xbdv\x16d\x81J\x1e\x95.b\xc2\x9e/\xb3\x13Eb\xc5cq\x18\x8c"Oj9\xe2!R\xd3\xc0\xadm\x1c\xffT\xcc\x12+Rf\x1e\x1f\xc26\xc8X&\xed\xf9\xcfOzz\xd3\x92.\xdfjhN[\xcax\xb8\x1a\xf4\xe7\x89\xc3n\x9c\x11\x140_wy\x95,\xc0\x87\xfc\xa8x\xea\x0erJ\x94]'
+ASCII: .Z.d...w+.G.....N.9.v+...{Emg.&..s.h}....t...0!..e.s..|..w............C...>".ZH_...=..Zj+...ar..O.S..[.^..J.|...,.>......|(6.~....&..D..)..\.Aj6..f.8p......jK..L.....9...t... ..E......#~Re.?E..........W'.p...NM.....0.F...t....o...Q....h..E..J.g.K.N*a.j.7e.3.X3A\.9..Y#_.E..i.E.....0.....h....t3...!...og.......S....[.'.0f.V...]"....x.X...H.F..w..s....;.q......GS.\O._3.)....6Y8....y.?.yO....&.,xE.L.(....:.^.gN.j7O.......P..C!ic..1.....,G...%..K..s2..G........ !....d...6.c.........h. gH......F.D.h..Y.2+.....$...y%.......Y..!.-GD.'..zC.KT...-.j.^1F..o+....E...Z.R...a7H.,.$..m......_._.7......L.....a...K..>sm.2.v/(..A.......!M..yn..*.....h....[...o.b....W}.M.[Eo..^.c._N...q*@..e....d?.;PC...]EO..7...k...........)0....sz!%.;......I.?.....:.WAa....>.\..b.{}...Z....w..a.zTj.&.t.K"CbU>79.4|.:. ....Y".9.u...v$h.g....H..#.....Y...^...k^1w.:..3....T.p.uD......"..>......U..W........#..Gg.......1.-.&..U.+........."...9|.*.|).n.8..xU..P_....1.:....k3.8.).B..Ie......?t..3....fi...V]..%.z..J.... K\.L...v.d.J...b../..Eb.cq.."Oj9.!R...m..T..+Rf...6.X&...Ozz....jhN[.x......n...0_wy.,....x..rJ.]
+
+
+=== CHAR AT DRIFT FOR NON-STANDARD PACKETS ONLY ===
+Message (1089 chars): Z.d...w+.G.....N.9.v+...{Emg.&..s.h}....t...0!..e.s..|..w............C...>".ZH_...=..Zj+...ar..O.S..[.^..J.|...,.>......|(6.~....&..D..)..\.Aj6..f.8p......jK..L.....9...t... ..E......#~Re.?E..........W'.p...NM.....0.F...t....o...Q....h..E..J.g.K.N*a.j.7e.3.X3A\.9..Y#_.E..i.E.....0.....h....t3...!...og.......S....[.'.0f.V...]"....x.X...H.F..w..s....;.q......GS.\O._3.)....6Y8....y.?.yO....&.,xE.L.(....:.^.gN.j7O.......P..C!ic..1.....,G...%..K..s2..G........ !....d...6.c.........h. gH......F.D.h..Y.2+.....$...y%.......Y..!.-GD.'..zC.KT...-.j.^1F..o+....E...Z.R...a7H.,.$..m......_._.7......L.....a...K..>sm.2.v/(..A.......!M..yn..*.....h....[...o.b....W}.M.[Eo..^.c._N...q*@..e....d?.;PC...]EO..7...k...........)0....sz!%.;......I.?.....:.WAa....>.\..b.{}...Z....w..a.zTj.&.t.K"CbU>79.4|.:. ....Y".9.u...v$h.g....H..#.....Y...^...k^1w.:..3....T.p.uD......"..>......U..W........#..Gg.......1.-.&..U.+........."...9|.*.|).n.8..xU..P_....1.:....k3.8.).B..Ie......?t..3....fi...V]..%.z..J.... K\.L...v.d.J...b../..Eb.cq.."Oj9.!R...m..T..+Rf...6.X&...Ozz....jhN[.x......n...0_wy.,....x..rJ.]
+ASCII strings: [b'{Emg', b'#~Re', b'X3A\\', b'C!ic', b'sz!%', b'K"CbU>79', b'k^1w', b'"Oj9', b'jhN[', b'0_wy']
+
+
+=== MEMORY CHARACTER MAP ===
+  offset 1000: '~'  offset 4000: 'D'  offset 9000: 'q'  offset 10000: 'R'  offset 11000: 'u'  offset 15000: 'i'  offset 17000: 'q'  offset 20000: 'G'  offset 21000: 'h'  offset 24000: '>'  offset 30000: '5'  offset 33000: 'K'  offset 35000: 'o'  offset 36000: '{'  offset 37000: '`'  offset 42000: '~'  offset 49000: 'V'  offset 51000: '('  offset 52000: '~'  offset 53000: '8'  offset 54000: ':'  offset 55000: '{'  offset 57000: ','  offset 59000: '7'  offset 62000: '$'  offset 66000: 'Z'  offset 68000: '6'  offset 70000: '3'  offset 73000: 'I'  offset 74000: '5'  offset 75000: 'Q'  offset 84000: 'w'  offset 87000: 'h'  offset 88000: 'T'  offset 89000: 'L'  offset 90000: 'l'  offset 91000: '>'  offset 92000: 'n'  offset 94000: '~'  offset 100000: 'z'  offset 102000: '9'  offset 103000: '!'  offset 104000: '/'  offset 106000: 'W'  offset 107000: 'W'  offset 108000: '&'  offset 109000: '^'  offset 110000: '^'  offset 113000: '%'  offset 116000: '#'  offset 118000: 'O'  offset 120000: '<'  offset 122000: '<'  offset 128000: '-'  offset 134000: '-'  offset 141000: 'M'  offset 142000: 'm'  offset 143000: ')'  offset 150000: 'H'  offset 152000: 'L'  offset 158000: '('  offset 161000: ']'  offset 162000: 'u'  offset 166000: '&'  offset 168000: 'I'  offset 170000: '#'  offset 171000: 'x'  offset 172000: 'E'  offset 180000: 'X'  offset 188000: '*'  offset 191000: '%'  offset 192000: 'q'  offset 194000: '/'  offset 195000: 'F'
+
+=== Memory sampling every 100 bytes (first 5000) ===
+       0: .y.-..w...
+     100: a/.....w._
+     200: ...y.*Y&..
+     300: .e.Nf.T>D.
+     400: Z.9k.q..:.
+     500: ...{.."..z
+     600: ..B...j\..
+     700: |7.C..?..i
+     800: cH=HPM.?.T
+     900: WG..%ox.C.
+    1000: ~..Q......
+    1100: ..tE..B.ch
+    1200: . ...>s...
+    1300: ;.U!...=..
+    1400: e.].)1.\..
+    1500: .d.Q..x.Q.
+    1600: ./.....,.e
+    1700: -yg..o....
+    1800: .._s..-!lj
+    1900: .~.|2.o.C.
+    2000: ...o..d...
+    2100: ..@#..)+.h
+    2200: .|.Z'.D.w.
+    2300: ;z.G......
+    2400: ...,G,.+=~
+    2500: I,...."^.o
+    2600: dt....sI..
+    2700: /....2S.1|
+    2800: Cc..t.D...
+    2900: ...c|...z.
+    3000: .........P
+    3100: .x..s#....
+    3200: &.....hXl.
+    3300: ...+..K!..
+    3400: I........V
+    3500: ..U..).a.i
+    3600: .|P<Y*.{.{
+    3700: ..... .z.|
+    3800: g........<
+    3900: r$..;...B-
+    4000: D..U.eY...
+    4100: 1../....@.
+    4200: .Gj...6...
+    4300: ,.j......1
+    4400: u.f.(..*.(
+    4500: .......~.F
+    4600: .da.{...~.
+    4700: ........3M
+    4800: .+.n.1.\dc
+    4900: .m._Q.P...
+
+
+=== CHARACTER AT ABSOLUTE OFFSETS 0-256 ===
+  mem[1] = 121 'y'
+  mem[3] = 45 '-'
+  mem[6] = 119 'w'
+  mem[12] = 107 'k'
+  mem[13] = 87 'W'
+  mem[15] = 37 '%'
+  mem[16] = 90 'Z'
+  mem[17] = 100 'd'
+  mem[19] = 63 '?'
+  mem[20] = 72 'H'
+  mem[21] = 69 'E'
+  mem[22] = 60 '<'
+  mem[23] = 34 '"'
+  mem[26] = 35 '#'
+  mem[30] = 111 'o'
+  mem[31] = 125 '}'
+  mem[33] = 43 '+'
+  mem[35] = 75 'K'
+  mem[40] = 100 'd'
+  mem[42] = 49 '1'
+  mem[46] = 55 '7'
+  mem[51] = 37 '%'
+  mem[55] = 96 '`'
+  mem[57] = 63 '?'
+  mem[58] = 62 '>'
+  mem[61] = 35 '#'
+  mem[63] = 44 ','
+  mem[65] = 38 '&'
+  mem[68] = 74 'J'
+  mem[69] = 65 'A'
+  mem[70] = 59 ';'
+  mem[72] = 36 '$'
+  mem[76] = 51 '3'
+  mem[78] = 119 'w'
+  mem[83] = 92 '\'
+  mem[85] = 33 '!'
+  mem[88] = 88 'X'
+  mem[89] = 40 '('
+  mem[91] = 34 '"'
+  mem[93] = 37 '%'
+  mem[94] = 36 '$'
+  mem[97] = 43 '+'
+  mem[100] = 97 'a'
+  mem[101] = 47 '/'
+  mem[107] = 119 'w'
+  mem[109] = 95 '_'
+  mem[110] = 52 '4'
+  mem[113] = 102 'f'
+  mem[115] = 48 '0'
+  mem[119] = 102 'f'
+  mem[123] = 90 'Z'
+  mem[130] = 92 '\'
+  mem[132] = 76 'L'
+  mem[136] = 95 '_'
+  mem[140] = 51 '3'
+  mem[142] = 79 'O'
+  mem[143] = 48 '0'
+  mem[145] = 60 '<'
+  mem[146] = 41 ')'
+  mem[151] = 54 '6'
+  mem[157] = 122 'z'
+  mem[158] = 126 '~'
+  mem[162] = 107 'k'
+  mem[163] = 51 '3'
+  mem[164] = 36 '$'
+  mem[170] = 44 ','
+  mem[174] = 55 '7'
+  mem[179] = 88 'X'
+  mem[182] = 71 'G'
+  mem[184] = 126 '~'
+  mem[186] = 118 'v'
+  mem[188] = 33 '!'
+  mem[189] = 84 'T'
+  mem[192] = 121 'y'
+  mem[193] = 84 'T'
+  mem[196] = 40 '('
+  mem[199] = 57 '9'
+  mem[203] = 121 'y'
+  mem[205] = 42 '*'
+  mem[206] = 89 'Y'
+  mem[207] = 38 '&'
+  mem[210] = 104 'h'
+  mem[211] = 70 'F'
+  mem[215] = 32 ' '
+  mem[221] = 62 '>'
+  mem[224] = 116 't'
+  mem[225] = 98 'b'
+  mem[228] = 102 'f'
+  mem[231] = 94 '^'
+  mem[233] = 126 '~'
+  mem[241] = 120 'x'
+  mem[242] = 86 'V'
+  mem[243] = 34 '"'
+  mem[244] = 97 'a'
+  mem[246] = 94 '^'
+  mem[250] = 89 'Y'
+  mem[254] = 60 '<'
+
+
+=== CHARACTERS AT ALL ABSOLUTE DRIFT VALUES ===
+Unique absolute drift values: 1090
+Range: 0 to 105449
+Printable chars at drift offsets: 412
+Characters:
+  Zdw+GN9v+{Emg&sh}t0!es|wC>"ZH_=Zj+arOS[^J|,>|(6~&D)\Aj6f8pjKL9t E#~Re?EW'pNM0FtoQhEJgKN*aj7e3X3A\9Y#_EiE0ht3!ogS['0fV]"xXHFws.;qGS\O_3)6Y8y?yO&,xEL(:^gNj7OPC!ic1,G%Ks2G !d6ch gHFDhY2+$y%Y!-GD'zCKT-j^1Fo+EZRa7H,$.m__7LaK>sm2v/(A.!Myn*h[obW}M[Eo^c_Nq*@ed?;PC]EO7k)0sz!%;I?:WAa>\b{}.ZwazTj&tK"CbU>794|: Y"9uv$hgH#Y^k^1w:3TpuD">UW#Gg1-&U+"9|*|)n8xUP_1:k38)BIe?t3fiV]%zJ K\LvdJ.b/Ebcq"Oj9!RmT+Rf6X&Ozz.jhN[xn0_wy,xrJ]
+
+=== CHARS IN ORDER OF APPEARANCE ===
+.Z.d...w+.G.....N.9.v+...{Emg.&..s.h}....t...0!..e.s..|..w............C...>".ZH_...=..Zj+...ar..O.S..[.^..J.|...,.>......|(6.~....&..D..)..\.Aj6..f.8p......jK..L.....9...t... ..E......#~Re.?E..........W'.p...NM.....0.F...t....o...Q....h..E..J.g.K.N*a.j.7e.3.X3A\.9..Y#_.E..i.E.....0.....h....t3...!...og.......S....[.'.0f.V...]"....x.X...H.F..w..s....;.q......GS.\O._3.)....6Y8....y.?.yO....&.,xE.L.(....:.^.gN.j7O.......P..C!ic..1.....,G...%..K..s2..G........ !....d...6.c.........h. gH......F.D.h..Y.2+.....$...y%.......Y..!.-GD.'..zC.KT...-.j.^1F..o+....E...Z.R...a7H.,.$..m......_._.7......L.....a...K..>sm.2.v/(..A.......!M..yn..*.....h....[...o.b....W}.M.[Eo..^.c._N...q*@..e....d?.;PC...]EO..7...k...........)0....sz!%.;......I.?.....:.WAa....>.\..b.{}...Z....w..a.zTj.&.t.K"CbU>79.4|.:. ....Y".9.u...v$h.g....H..#.....Y...^...k^1w.:..3....T.p.uD......"..>......U..W........#..Gg.......1.-.&..U.+........."...9|.*.|).n.8..xU..P_....1.:....k3.8.).B..Ie......?t..3....fi...V]..%.z..J.... K\.L...v.d.J...b../..Eb.cq.."Oj9.!R...m..T..+Rf...6.X&...Ozz....jhN[.x......n...0_wy.,....x..rJ.]
+
+
+=== DEVIATION DIRECT TO MEMORY ===
+Message: ......Z.yZ..Z..y.Zy..y.Zy..Z.....Z..........Z..y..Z.Z...y..Z..........y....y..y........Z...Z.y....Zy

