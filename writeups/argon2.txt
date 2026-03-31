@@ -1,0 +1,85 @@
+﻿Challenge Name: Argon2 Cracker
+Category: Cryptography / Hash Cracking
+Flag Format: (4-character uppercase alphanumeric)
+Challenge Description
+The challenge provided an Argon2id hash in PHC format:
+argon2id$v=19$m=65536,t=3,p=4$i/eOmAF+Qg40JHQAt4J/2A$sSPcLIMzrICGjBh3G5IcYZ
+A hint was also given:
+The password consists of uppercase letters (A–Z) and digits (0–9)
+Suggested using tools like hashcat
+Password length = 4 characters
+Solution
+Step 1: Analyze the Hash Format
+Identified the hash as Argon2id
+Observed:
+Incorrect character (O instead of 0)
+Missing base64 padding (==)
+Unusually short hash output (16 bytes instead of typical 32)
+Conclusion:
+Hash is valid cryptographically but malformed structurally
+Tools like Hashcat fail due to strict format requirements
+Step 2: Extract Raw Components
+Decoded base64 manually:
+Salt:
+8bf7b498017e420e34247400b7827fd8
+Hash:
+b123dc2e2333ac80868c18771b921c61
+These were used directly instead of relying on the broken PHC string.
+Step 3: Determine Search Space
+From hint:
+Charset = A–Z + 0–9
+Length = 4
+Total combinations:
+36^4 = 1,679,616
+Step 4: Generate Wordlist
+Created a complete wordlist:
+AAAA → ZZZZ
+0000 → 9999
+...
+Split into chunks (10k per file) to allow:
+parallel processing
+faster execution
+Step 5: Brute-force Locally
+Used Python with Argon2 raw hashing:
+from argon2.low_level import hash_secret_raw, Type
+result = hash_secret_raw(
+  secret=word.encode(),
+  salt=salt,
+  time_cost=3,
+  memory_cost=65536,
+  parallelism=4,
+  hash_len=16,
+  type=Type.ID
+)
+Compared each result with target hash.
+Step 6: Optimize Execution
+Ran on Google Cloud VM
+Used:
+wordlist chunking
+resumable script
+background execution
+Reduced runtime significantly.
+Step 7: Retrieve Password
+Script output:
+FOUND: UTF7
+This 4-character string is the flag.
+Root Cause
+Hash was intentionally malformed:
+invalid base64 encoding
+truncated hash length
+Prevented direct use of cracking tools
+Forced manual extraction and raw hashing
+The challenge tests:
+understanding of Argon2 internals
+ability to bypass tool limitations
+adapting approach when formats break
+Flag
+Retrieved via local brute-force after reconstructing hash
+Format: 4-character uppercase alphanumeric string
+Tools Used
+Python (argon2-cffi library)
+Google Cloud VM
+Custom scripts (wordlist generation, chunking, brute-force)
+Linux CLI tools (grep, crunch, nano)
+
+Flag: UTF7

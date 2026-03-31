@@ -40,3 +40,5 @@ Tools Used
 
 - Browser (lab URL discovery)
 - Python script (main2.py)
+
+Flag: ctf7{cant_guess_jwt_30ccd192}

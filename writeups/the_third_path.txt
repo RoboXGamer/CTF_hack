@@ -82,3 +82,5 @@ Tools Used
 - Python (PyCryptodome): For AES decryption of the decoy payloads.
 - Python (Pillow/zlib): To reconstruct the bitmap from the extracted timing bytes.
 - Strings / Binwalk: For initial memory dump inspection.
+
+Flag: MythX{c0v3rt_dn5_t1m1n6_n1ghtm4r3}

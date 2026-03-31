@@ -70,3 +70,5 @@ MythX{Norma_1650_1701_27112008}
 - Audio Analysis: Manual listening and keyword extraction.
 - Google Search / OSINT: Locating public records of the 26/11 transcripts.
 - YouTube: Visual verification of time/date overlays in news archives.
+
+Flag: MythX{Norma_1650_1701_27112008}

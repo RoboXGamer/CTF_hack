@@ -57,3 +57,5 @@ Tools Used
 - Reverse image search
 - Web search (OSINT)
 - Louvre collection database
+
+Flag: MythX{gebel_el_arak_knife_musee_du_louvre_e11517}

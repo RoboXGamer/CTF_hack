@@ -64,3 +64,5 @@ Final Payload
 - 127.0.0.1$(printenv FLAG)
 
 - This retrieves and leaks the flag via ping error output.
+
+Flag: ????

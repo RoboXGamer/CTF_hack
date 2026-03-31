@@ -1,0 +1,123 @@
+Question: argon2
+UTF7
+
+Question: Before Dynasty
+MythX{gebel_el_arak_knife_musee_du_louvre_e11517}
+
+Question: Feedback Form
+MYTHX{D00m_@wakens_bey0nd_End6ame}
+
+Question: crack seal
+ctf7{jw7_w34k_s3cr37_cr4ck3d}
+
+Question: blind trust
+ctf7{CTF7_IAM_TRUST_MODEL_COMPROMISED}
+
+Question: dojo
+ctf7{heap_c0rrupti0n_break5_bush1d0}
+
+Question: Captured in Silence
+MythX{Diani_Beach}
+
+
+Question: just for fun
+MYTHX{BYT3HUNTERS}
+
+Question: Header hunter
+Flag: ????
+
+Question: Note manager
+ctf7{hope_is_fine_but_69_169839f6}
+
+Question: The Administrative Trail
+MythX{9870111970}
+
+Question: XOR
+ctf7{xor_recovered_key_430dac62}
+
+Question: RSA Common Factor
+Flag: ????
+
+Question: parsing the unknown
+MythX{cHuNk_p4rsIng_Is_fUn_m45t3r}
+
+Question: h&m part 1
+MythX{V33R_ABDUL_H4M1D_PVC_1965}
+
+Question: 2.36 part1
+MythX{Norma_1650_1701_27112008}
+
+Question: the third path
+MythX{c0v3rt_dn5_t1m1n6_n1ghtm4r3}
+
+Question: Two point three six part 2
+Flag: ????
+
+Question: redirect maze
+ctf7{lost_in_redirects)_090fcf56
+
+Question: ping tool
+Flag: ????
+
+Question: the encoding onion
+Ctf7{peel_the_onion_fa6ca2f7}
+
+Question: js vault
+ctf7{js_secret_exposed_9e55044c}
+
+Question: Source dive
+Flag: ????
+
+Question: H and M part 2
+MythX{HariRamJanu_22_4Grenadiers_FarhatBhatti_SenaMedal}
+
+Question: greeting services
+ctf7{fmt_n_buffer_23_6aa65623}
+
+Question: Disallowed path
+Flag: ????
+
+Question: shinchi
+ctf7{seven_magic_pm}
+
+Question: jwt
+ctf7{cant_guess_jwt_30ccd192}
+
+Question: cipher room
+ctf7{h1ll3v_1n_c1xp3r_vsw3504w}
+
+Question: signing oracle
+ctf7{noobs_dont_ecdsa_f7c4dfd8}
+
+Question: Profile hub
+Flag: ????
+
+Question: staff dashboard
+ctf7{org_internal_breach_c1f73135}
+
+Question: SQL injection login bypass
+Flag: ????
+
+Question: Cookie auth
+Flag: ????
+
+Question: api gateway
+ctf7{API_fate_way_cbfe713a}
+
+Question: Suspicious transmission
+Flag: ????
+
+Question: DocViewer
+Flag: ????
+
+Question: Userhub
+Flag: ????
+
+Question: card studio
+ctf7{studio_secrets_unlocked_6a424d79}
+
+Question: Hidden in zip
+ctf7{zip_in_hidden_e90ef959}
+
+Question: Rot-13 Decryptor
+ctf7{This_is_hole_proof}

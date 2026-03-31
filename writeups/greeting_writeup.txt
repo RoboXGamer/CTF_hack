@@ -74,3 +74,5 @@ Tools Used
 - Python + pwntools
 - nc for manual testing
 - Host/port from challenge environment
+
+Flag: ctf7{fmt_n_buffer_23_6aa65623}

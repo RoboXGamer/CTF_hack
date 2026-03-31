@@ -57,3 +57,5 @@ Tools Used
 
 - Browser + API docs
 - Postman
+
+Flag: ctf7{API_fate_way_cbfe713a}
